@@ -1,0 +1,91 @@
+﻿Module Bookstore
+{
+    Entity Book
+    {
+        ShortString Code { AutoCode;}
+        ShortString Title;
+        Integer NumberOfPages;
+        DateTime Started {CreationTime;DenyUserEdit;}
+        DateTime Modified { ModificationTimeOf Bookstore.Book.Title; }
+        Reference Author Bookstore.Person;
+        DateTime BookCreated { DefaultValue 'item => DateTime.Now.Date'; } 
+
+        ItemFilter LongBooks 'item => item.NumberOfPages >= 500';
+        InvalidData LongBooks 'It is not allowed to enter books with more pages than 500';
+        ItemFilter ShortBooks 'item=>item.NumberOfPages <= 0';
+        InvalidData ShortBooks 'It is not allowed to have a book with 0 or less pages';
+        ItemFilter ContainsLockMark 'item => item.Title.Contains("lock")';
+        Lock ContainsLockMark '[Test] Title contains lock mark';
+        ItemFilter CommonMisspelling 'book => book.Title.Contains("curiousity")';
+        InvalidData CommonMisspelling 'It is not allowed to enter misspelled word "curiousity".';
+
+        ComposableFilterBy ShortBooks2 '(query,repository,parameter)=>
+        {
+            return query.Where(item=>item.NumberOfPages<=100);
+        }';
+
+        ComposableFilterBy AverageBooks '(query,repository,parameter)=>
+        {
+            return query.Where(item=>item.NumberOfPages>=parameter.MinimumPages && item.NumberOfPages<=parameter.MaximumPages);
+        }';
+
+        FilterBy ComplexSearch '(repository, parameter) =>
+        {
+            var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);
+            if (parameter.ForeignBooksOnly == true)
+                query = query.Where(item => item.Extension_ForeignBook.ID != null);
+            Book[] books = query.ToSimple().ToArray();
+
+            if (parameter.MaskTitles == true)
+                foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title)))
+                    book.Title = book.Title.First() + "***" + book.Title.Last();
+
+            return books;
+        }'; 
+
+        ComposableFilterBy LongBooks3 '(query, repository, parameter) =>
+            {
+                var filtered = query.Where(item => item.NumberOfPages >= parameter.MinimumPages);
+                if (parameter.ForeignBooksOnly == true)
+                    filtered = filtered.Where(item => item.Extension_ForeignBook.ID != null);
+                return filtered;
+            }';
+
+        Deactivatable;
+        Logging { AllProperties; }
+    }
+
+        Parameter LongBooks3
+    {
+        Integer MinimumPages;
+        Bool ForeignBooksOnly;
+    }
+
+
+     Parameter ComplexSearch
+    {
+        Integer MinimumPages;
+        Bool ForeignBooksOnly;
+        Bool MaskTitles;
+    }
+
+    Parameter AverageBooks{
+        Integer MinimumPages;
+        Integer MaximumPages;
+    }
+
+    Parameter ShortBooks2{
+    }
+
+    Entity Comment{
+        Reference Book { Detail; }
+        LongString Text;
+    }
+
+    Browse BookStoreGrid Bookstore.Book
+    {
+        Take Title;
+        Take 'Author.Name';
+        Take NumberOfTopics 'Extension_BookInfo.NumberOfComments';
+    }
+}

@@ -1,0 +1,10 @@
+Module Bookstore{
+    Entity ChildrensBook
+    {
+        Extends Bookstore.Book;
+
+        Integer AgeFrom;
+        Integer AgeTo;
+        IntegerRange AgeFrom AgeTo;
+    }
+}

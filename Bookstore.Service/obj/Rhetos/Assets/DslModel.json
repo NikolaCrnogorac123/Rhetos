@@ -1,0 +1,6230 @@
+{
+  "$id": "1",
+  "$type": "System.Collections.Generic.List`1[[Rhetos.Dsl.IConceptInfo, Rhetos.Dsl.Interfaces]], mscorlib",
+  "$values": [
+    {
+      "$id": "2",
+      "$type": "Rhetos.Dsl.InitializationConcept, Rhetos.Dsl.Interfaces",
+      "RhetosVersion": "4.3.0"
+    },
+    {
+      "$id": "3",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleInfo, Rhetos.Dsl.DefaultConcepts",
+      "Name": "Bookstore"
+    },
+    {
+      "$id": "4",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleInfo, Rhetos.Dsl.DefaultConcepts",
+      "Name": "Common"
+    },
+    {
+      "$id": "5",
+      "$type": "Rhetos.RestGenerator.Plugins.RestServiceContractInfo, Rhetos.RestGenerator",
+      "ServiceGenerator": {
+        "$ref": "2"
+      },
+      "ServiceClassAttributeTag": "/*InitialCodeGenerator.ActionRestServiceAttributesTag*/"
+    },
+    {
+      "$id": "6",
+      "$type": "Rhetos.RestGenerator.Plugins.RestServiceContractInfo, Rhetos.RestGenerator",
+      "ServiceGenerator": {
+        "$ref": "2"
+      },
+      "ServiceClassAttributeTag": "/*InitialCodeGenerator.DataRestServiceAttributesTag*/"
+    },
+    {
+      "$id": "7",
+      "$type": "Rhetos.RestGenerator.Plugins.RestServiceContractInfo, Rhetos.RestGenerator",
+      "ServiceGenerator": {
+        "$ref": "2"
+      },
+      "ServiceClassAttributeTag": "/*InitialCodeGenerator.ReportRestServiceAttributesTag*/"
+    },
+    {
+      "$id": "8",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "AgeFrom_AgeTo_RangeFilter",
+      "FullName": "Bookstore.AgeFrom_AgeTo_RangeFilter"
+    },
+    {
+      "$id": "9",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "AverageBooks",
+      "FullName": "Bookstore.AverageBooks"
+    },
+    {
+      "$id": "10",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Book",
+      "FullName": "Bookstore.Book"
+    },
+    {
+      "$id": "11",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlQueryableInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlSource": "SELECT\r\n    b.ID,\r\n    NumberOfComments = COUNT(c.ID)\r\nFROM\r\n    Bookstore.Book b\r\n    LEFT JOIN Bookstore.Comment c ON c.BookID = b.ID\r\nGROUP BY\r\n    b.ID",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "BookInfo",
+      "FullName": "Bookstore.BookInfo"
+    },
+    {
+      "$id": "12",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "BookTopic",
+      "FullName": "Bookstore.BookTopic"
+    },
+    {
+      "$id": "13",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ChildrensBook",
+      "FullName": "Bookstore.ChildrensBook"
+    },
+    {
+      "$id": "14",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Comment",
+      "FullName": "Bookstore.Comment"
+    },
+    {
+      "$id": "15",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "CommonMisspelling",
+      "FullName": "Bookstore.CommonMisspelling"
+    },
+    {
+      "$id": "16",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ComplexSearch",
+      "FullName": "Bookstore.ComplexSearch"
+    },
+    {
+      "$id": "17",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ContainsLockMark",
+      "FullName": "Bookstore.ContainsLockMark"
+    },
+    {
+      "$id": "18",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Employee",
+      "FullName": "Bookstore.Employee"
+    },
+    {
+      "$id": "19",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ForeignBook",
+      "FullName": "Bookstore.ForeignBook"
+    },
+    {
+      "$id": "20",
+      "$type": "Rhetos.Dsl.DefaultConcepts.HardcodedEntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Genre",
+      "FullName": "Bookstore.Genre"
+    },
+    {
+      "$id": "21",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ActionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Script": "(parameter, repository, userInfo) =>\r\n        {\r\n            for (int i = 0; i < 5; i++)\r\n            {\r\n                var newBook = new Bookstore.Book { Code = \"+++\", Title = \"Book\"+i };\r\n                repository.Bookstore.Book.Insert(newBook);\r\n            }\r\n        }",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Insert5Books",
+      "FullName": "Bookstore.Insert5Books"
+    },
+    {
+      "$id": "22",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ActionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Script": "(parameter, repository, userInfo) =>\r\n    {\r\n        for (int i = 0; i < parameter.NumberOfBooks; i++)\r\n        {\r\n            string newTitle = parameter.TitlePrefix + \" - \" + (i + 1);\r\n            var newBook = new Bookstore.Book { Code = \"+++\", Title = newTitle };\r\n            repository.Bookstore.Book.Insert(newBook);\r\n        }\r\n    }",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "InsertManyBooks",
+      "FullName": "Bookstore.InsertManyBooks"
+    },
+    {
+      "$id": "23",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "LongBooks",
+      "FullName": "Bookstore.LongBooks"
+    },
+    {
+      "$id": "24",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "LongBooks3",
+      "FullName": "Bookstore.LongBooks3"
+    },
+    {
+      "$id": "25",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Person",
+      "FullName": "Bookstore.Person"
+    },
+    {
+      "$id": "26",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ShortBooks",
+      "FullName": "Bookstore.ShortBooks"
+    },
+    {
+      "$id": "27",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "ShortBooks2",
+      "FullName": "Bookstore.ShortBooks2"
+    },
+    {
+      "$id": "28",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "SystemRequiredActive",
+      "FullName": "Bookstore.SystemRequiredActive"
+    },
+    {
+      "$id": "29",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "SystemRequiredBook",
+      "FullName": "Bookstore.SystemRequiredBook"
+    },
+    {
+      "$id": "30",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "SystemRequiredCode",
+      "FullName": "Bookstore.SystemRequiredCode"
+    },
+    {
+      "$id": "31",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Topic",
+      "FullName": "Bookstore.Topic"
+    },
+    {
+      "$id": "32",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "TypeOrAssembly": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "33",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlFunctionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Genre_Biography",
+      "Arguments": null,
+      "Source": "\r\nRETURNS uniqueidentifier\r\nAS\r\nBEGIN\r\n\tRETURN CONVERT(uniqueidentifier, 'dabe2d94-7191-579a-8e95-f5d395aee8f7');\r\nEND"
+    },
+    {
+      "$id": "34",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlFunctionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "Genre_ScienceFiction",
+      "Arguments": null,
+      "Source": "\r\nRETURNS uniqueidentifier\r\nAS\r\nBEGIN\r\n\tRETURN CONVERT(uniqueidentifier, '3fc47b39-fca4-0786-9d05-039834344591');\r\nEND"
+    },
+    {
+      "$id": "35",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlObjectInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "SchemaAuthorization",
+      "CreateSql": "ALTER AUTHORIZATION ON SCHEMA::Bookstore TO dbo",
+      "RemoveSql": ""
+    },
+    {
+      "$id": "36",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ActionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Script": "(parameter, repository, userInfo) =>\r\n\t\t{\r\n\t\t\tif (parameter.Action == null)\r\n\t\t\t\tthrow new Rhetos.UserException(\"Parameter Action is required.\");\r\n\t\t\tstring sql = @\"INSERT INTO Common.Log (Action, TableName, ItemId, Description)\r\n                SELECT @p0, @p1, @p2, @p3\";\r\n\t\t\t_executionContext.EntityFrameworkContext.Database.ExecuteSqlCommand(sql,\r\n\t\t\t\tparameter.Action,\r\n\t\t\t\tparameter.TableName,\r\n\t\t\t\tparameter.ItemId,\r\n\t\t\t\tparameter.Description);\r\n\t\t}",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "AddToLog",
+      "FullName": "Common.AddToLog"
+    },
+    {
+      "$id": "37",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "AutoCodeCache",
+      "FullName": "Common.AutoCodeCache"
+    },
+    {
+      "$id": "38",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "Claim",
+      "FullName": "Common.Claim"
+    },
+    {
+      "$id": "39",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "ExclusiveLock",
+      "FullName": "Common.ExclusiveLock"
+    },
+    {
+      "$id": "40",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "FilterId",
+      "FullName": "Common.FilterId"
+    },
+    {
+      "$id": "41",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "KeepSynchronizedMetadata",
+      "FullName": "Common.KeepSynchronizedMetadata"
+    },
+    {
+      "$id": "42",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "Log",
+      "FullName": "Common.Log"
+    },
+    {
+      "$id": "43",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlQueryableInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlSource": "SELECT\r\n    ID,\r\n    Created,\r\n    UserName,\r\n    Workstation,\r\n    ContextInfo,\r\n    Action,\r\n    TableName,\r\n    ItemId,\r\n    Description\r\nFROM\r\n    Common.Log WITH (NOLOCK)\r\n\r\n/*Common.LogReader AdditionalSource*/\r\n",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "LogReader",
+      "FullName": "Common.LogReader"
+    },
+    {
+      "$id": "44",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "LogRelatedItem",
+      "FullName": "Common.LogRelatedItem"
+    },
+    {
+      "$id": "45",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlQueryableInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlSource": "SELECT\r\n    ID,\r\n    LogID,\r\n    TableName,\r\n    ItemId,\r\n    Relation\r\nFROM\r\n    Common.LogRelatedItem WITH (NOLOCK)\r\n\r\n/*Common.LogRelatedItemReader AdditionalSource*/\r\n",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "LogRelatedItemReader",
+      "FullName": "Common.LogRelatedItemReader"
+    },
+    {
+      "$id": "46",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "Principal",
+      "FullName": "Common.Principal"
+    },
+    {
+      "$id": "47",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "PrincipalHasRole",
+      "FullName": "Common.PrincipalHasRole"
+    },
+    {
+      "$id": "48",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "PrincipalPermission",
+      "FullName": "Common.PrincipalPermission"
+    },
+    {
+      "$id": "49",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlQueryableInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlSource": "SELECT\r\n    ID = lri.ID,\r\n    Created = l.Created,\r\n    UserName = l.UserName,\r\n    Workstation = l.Workstation,\r\n    ContextInfo = l.ContextInfo,\r\n    Action = l.Action,\r\n    TableName = l.TableName,\r\n    ItemId = l.ItemId,\r\n    Description = l.Description,\r\n    LogID = l.ID,\r\n    lri.Relation,\r\n    lri.TableName AS RelatedToTable,\r\n    lri.ItemId AS RelatedToItem\r\nFROM\r\n    Common.LogRelatedItemReader lri\r\n    INNER JOIN Common.LogReader l ON l.ID = lri.LogID\r\n\r\nUNION ALL\r\n\r\nSELECT\r\n    ID = l.ID,\r\n    Created = l.Created,\r\n    UserName = l.UserName,\r\n    Workstation = l.Workstation,\r\n    ContextInfo = l.ContextInfo,\r\n    Action = l.Action,\r\n    TableName = l.TableName,\r\n    ItemId = l.ItemId,\r\n    Description = l.Description,\r\n    LogID = l.ID,\r\n    N'' AS Relation,\r\n    l.TableName AS RelatedToTable,\r\n    l.ItemId AS RelatedToItem\r\nFROM\r\n    Common.LogReader l\r\n",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "RelatedEventsSource",
+      "FullName": "Common.RelatedEventsSource"
+    },
+    {
+      "$id": "50",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ActionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Script": "(parameters, repository, userInfo) =>\r\n        {\r\n            var myLock = repository.Common.ExclusiveLock.Query()\r\n                .Where(itemLock =>\r\n                    itemLock.ResourceType == parameters.ResourceType\r\n                    && itemLock.ResourceID == parameters.ResourceID\r\n                    && itemLock.UserName == userInfo.UserName\r\n                    && itemLock.Workstation == userInfo.Workstation)\r\n                .FirstOrDefault();\r\n\r\n            if (myLock != null)\r\n                repository.Common.ExclusiveLock.Delete(new[] { myLock });\r\n        }",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "ReleaseLock",
+      "FullName": "Common.ReleaseLock"
+    },
+    {
+      "$id": "51",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "Role",
+      "FullName": "Common.Role"
+    },
+    {
+      "$id": "52",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "RoleInheritsRole",
+      "FullName": "Common.RoleInheritsRole"
+    },
+    {
+      "$id": "53",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "RolePermission",
+      "FullName": "Common.RolePermission"
+    },
+    {
+      "$id": "54",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "RowPermissionsReadItems",
+      "FullName": "Common.RowPermissionsReadItems"
+    },
+    {
+      "$id": "55",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "RowPermissionsWriteItems",
+      "FullName": "Common.RowPermissionsWriteItems"
+    },
+    {
+      "$id": "56",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ActionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Script": "(parameters, repository, userInfo) =>\r\n        {\r\n            var now = SqlUtility.GetDatabaseTime(_executionContext.SqlExecuter);\r\n\r\n            var oldLock = repository.Common.ExclusiveLock.Query()\r\n                .Where(itemLock =>\r\n                    itemLock.ResourceType == parameters.ResourceType\r\n                    && itemLock.ResourceID == parameters.ResourceID)\r\n                .FirstOrDefault();\r\n            \r\n            if (oldLock == null)\r\n                repository.Common.ExclusiveLock.Insert(new[] { new Common.ExclusiveLock\r\n                    {\r\n                        UserName = userInfo.UserName,\r\n                        Workstation = userInfo.Workstation,\r\n                        ResourceType = parameters.ResourceType,\r\n                        ResourceID = parameters.ResourceID,\r\n                        LockStart = now,\r\n                        LockFinish = now.AddMinutes(15)\r\n                    }});\r\n            else if (oldLock.UserName == userInfo.UserName\r\n                && oldLock.Workstation == userInfo.Workstation\r\n                || oldLock.LockFinish < now)\r\n                repository.Common.ExclusiveLock.Update(new[] { new Common.ExclusiveLock\r\n                    {\r\n                        ID = oldLock.ID,\r\n                        UserName = userInfo.UserName,\r\n                        Workstation = userInfo.Workstation,\r\n                        ResourceType = parameters.ResourceType,\r\n                        ResourceID = parameters.ResourceID,\r\n                        LockStart = now,\r\n                        LockFinish = now.AddMinutes(15)\r\n                    }});\r\n             else\r\n             {\r\n                string lockInfo = _localizer[\"Locked record {0}, ID {1}.\", oldLock.ResourceType, oldLock.ResourceID];\r\n\r\n                string errorInfo;\r\n                if (oldLock.UserName.Equals(userInfo.UserName, StringComparison.InvariantCultureIgnoreCase))\r\n                    errorInfo = _localizer[\"It is not allowed to enter the record at client workstation '{0}' because the data entry is in progress at workstation '{1}'.\",\r\n                        userInfo.Workstation, oldLock.Workstation];\r\n                else\r\n                    errorInfo = _localizer[\"It is not allowed to enter the record because the data entry is in progress by user '{0}'.\",\r\n                        oldLock.UserName];\r\n                \r\n                string localizedMessage = errorInfo + \"\\r\\n\" + lockInfo;\r\n                throw new Rhetos.UserException(localizedMessage);\r\n             }\r\n        }",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SetLock",
+      "FullName": "Common.SetLock"
+    },
+    {
+      "$id": "57",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredActive",
+      "FullName": "Common.SystemRequiredActive"
+    },
+    {
+      "$id": "58",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredClaim",
+      "FullName": "Common.SystemRequiredClaim"
+    },
+    {
+      "$id": "59",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredLog",
+      "FullName": "Common.SystemRequiredLog"
+    },
+    {
+      "$id": "60",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredPrincipal",
+      "FullName": "Common.SystemRequiredPrincipal"
+    },
+    {
+      "$id": "61",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredRole",
+      "FullName": "Common.SystemRequiredRole"
+    },
+    {
+      "$id": "62",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ParameterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SystemRequiredUsersFrom",
+      "FullName": "Common.SystemRequiredUsersFrom"
+    },
+    {
+      "$id": "63",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "64",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.ICommonClaim, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "65",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.ICommonFilterId, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "66",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IKeepSynchronizedMetadata, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "67",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IPrincipal, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "68",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IPrincipalHasRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "69",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IPrincipalPermission, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "70",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "71",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IRoleInheritsRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "72",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Dom.DefaultConcepts.IRolePermission, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "73",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Utilities.ILocalizer, Rhetos.Utilities"
+    },
+    {
+      "$id": "74",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModuleExternalReferenceInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "TypeOrAssembly": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "75",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlObjectInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "SchemaAuthorization",
+      "CreateSql": "ALTER AUTHORIZATION ON SCHEMA::Common TO dbo",
+      "RemoveSql": ""
+    },
+    {
+      "$id": "76",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlProcedureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "AutoCodeCacheGetNext",
+      "ProcedureArguments": "@entity NVARCHAR(256),\r\n@property NVARCHAR(256),\r\n@grouping NVARCHAR(256),\r\n@prefix NVARCHAR(256),\r\n@minDigits INT,\r\n@quantity INT -- Number of generated codes (i.e., the number of inserted items). Must be 1 or greater. For @quantity greater than 1, @newCode will contain the last generated codes. The generated codes are from @newCode-@quantity+1 to @newCode.\r\n",
+      "ProcedureSource": "IF @grouping IS NULL SET @grouping = '';\r\n\r\nIF @quantity < 1\r\n\tBEGIN RAISERROR('Invalid argument: @quantity (%d). The value must be 1 or greater. ', 16, 10, @quantity); RETURN 1; END\r\n\r\nDECLARE @newCode INT;\r\n\r\nUPDATE\r\n\tacc\r\nSET\r\n\t@minDigits = MinDigits = CASE WHEN @minDigits > acc.MinDigits THEN @minDigits ELSE acc.MinDigits END,\r\n\t@newCode = LastCode = acc.LastCode + @quantity\r\nFROM\r\n\tCommon.AutoCodeCache acc WITH (ROWLOCK, UPDLOCK, SERIALIZABLE, INDEX(IX_AutoCodeCache_Entity_Property_Grouping_Prefix))\r\nWHERE\r\n\tacc.Entity = @entity\r\n\tAND acc.Property = @property\r\n\tAND acc.Grouping = @grouping\r\n\tAND acc.Prefix = @prefix;\r\n\r\nIF @@ROWCOUNT = 0\r\nBEGIN\r\n\tSET @minDigits = ISNULL(@minDigits, 0);\r\n\tSET @newCode = @quantity;\r\n\r\n\tINSERT INTO\r\n\t\tCommon.AutoCodeCache WITH (ROWLOCK, UPDLOCK)\r\n\t\t(ID, Entity, Property, Grouping, Prefix, MinDigits, LastCode)\r\n\tVALUES\r\n\t\t(NEWID(), @entity, @property, @grouping, @prefix, @minDigits, @newCode);\r\nEND\r\n\r\nSELECT MinDigits = @minDigits, NewCode = @newCode;\r\n"
+    },
+    {
+      "$id": "77",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlProcedureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "AutoCodeCacheUpdate",
+      "ProcedureArguments": "@entity NVARCHAR(256),\r\n@property NVARCHAR(256),\r\n@grouping NVARCHAR(256),\r\n@prefix NVARCHAR(256),\r\n@minDigits INT,\r\n@providedCode INT -- Update the existing cache with the new code value, explicitly provided instead of generated. Either @quantity or @providedCode must be set.\r\n",
+      "ProcedureSource": "IF @grouping IS NULL SET @grouping = '';\r\n\r\nUPDATE\r\n\tacc\r\nSET\r\n\tMinDigits = CASE WHEN @providedCode > acc.LastCode THEN @minDigits ELSE acc.MinDigits END,\r\n\tLastCode = CASE WHEN @providedCode > acc.LastCode THEN @providedCode ELSE acc.LastCode END\r\nFROM\r\n\tCommon.AutoCodeCache acc WITH (ROWLOCK, UPDLOCK, INDEX(IX_AutoCodeCache_Entity_Property_Grouping_Prefix))\r\nWHERE\r\n\tacc.Entity = @entity\r\n\tAND acc.Property = @property\r\n\tAND acc.Grouping = @grouping\r\n\tAND acc.Prefix = @prefix;\r\n\r\nIF @@ROWCOUNT = 0\r\nBEGIN\r\n\tINSERT INTO\r\n\t\tCommon.AutoCodeCache WITH (ROWLOCK, UPDLOCK)\r\n\t\t(ID, Entity, Property, Grouping, Prefix, MinDigits, LastCode)\r\n\tVALUES\r\n\t\t(NEWID(), @entity, @property, @grouping, @prefix, @minDigits, @providedCode);\r\nEND\r\n"
+    },
+    {
+      "$id": "78",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "9"
+      },
+      "Name": "MaximumPages",
+      "FullName": "Bookstore.AverageBooks.MaximumPages"
+    },
+    {
+      "$id": "79",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "9"
+      },
+      "Name": "MinimumPages",
+      "FullName": "Bookstore.AverageBooks.MinimumPages"
+    },
+    {
+      "$id": "80",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "Module": {
+        "$ref": "3"
+      },
+      "Name": "BookStoreGrid",
+      "FullName": "Bookstore.BookStoreGrid"
+    },
+    {
+      "$id": "81",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DeactivatableInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "82",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DefaultValuesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "83",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "84",
+      "$type": "Rhetos.Dsl.DefaultConcepts.FilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "ComplexSearch",
+      "Expression": "(repository, parameter) =>\r\n        {\r\n            var query = repository.Bookstore.Book.Query(item => item.NumberOfPages >= parameter.MinimumPages);\r\n            if (parameter.ForeignBooksOnly == true)\r\n                query = query.Where(item => item.Extension_ForeignBook.ID != null);\r\n            Book[] books = query.ToSimple().ToArray();\r\n\r\n            if (parameter.MaskTitles == true)\r\n                foreach (var book in books.Where(b => !string.IsNullOrEmpty(b.Title)))\r\n                    book.Title = book.Title.First() + \"***\" + book.Title.Last();\r\n\r\n            return books;\r\n        }"
+    },
+    {
+      "$id": "85",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "CommonMisspelling",
+      "ErrorMessage": "It is not allowed to enter misspelled word \"curiousity\"."
+    },
+    {
+      "$id": "86",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "LongBooks",
+      "ErrorMessage": "It is not allowed to enter books with more pages than 500"
+    },
+    {
+      "$id": "87",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "ShortBooks",
+      "ErrorMessage": "It is not allowed to have a book with 0 or less pages"
+    },
+    {
+      "$id": "88",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "SystemRequiredActive",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "89",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "SystemRequiredCode",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "90",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "CommonMisspelling",
+      "Expression": "book => book.Title.Contains(\"curiousity\")"
+    },
+    {
+      "$id": "91",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "ContainsLockMark",
+      "Expression": "item => item.Title.Contains(\"lock\")"
+    },
+    {
+      "$id": "92",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "LongBooks",
+      "Expression": "item => item.NumberOfPages >= 500"
+    },
+    {
+      "$id": "93",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "ShortBooks",
+      "Expression": "item=>item.NumberOfPages <= 0"
+    },
+    {
+      "$id": "94",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "SystemRequiredActive",
+      "Expression": "item => item.Active == null"
+    },
+    {
+      "$id": "95",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterName": "SystemRequiredCode",
+      "Expression": "item => item.Code == null"
+    },
+    {
+      "$id": "96",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Parameter": "ComplexSearch"
+    },
+    {
+      "$id": "97",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LockItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "10"
+      },
+      "FilterType": "ContainsLockMark",
+      "Title": "[Test] Title contains lock mark"
+    },
+    {
+      "$id": "98",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModificationTimeOfInfrastructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "99",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Active",
+      "FullName": "Bookstore.Book.Active"
+    },
+    {
+      "$id": "100",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "BookCreated",
+      "FullName": "Bookstore.Book.BookCreated"
+    },
+    {
+      "$id": "101",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Code",
+      "FullName": "Bookstore.Book.Code"
+    },
+    {
+      "$id": "102",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Modified",
+      "FullName": "Bookstore.Book.Modified"
+    },
+    {
+      "$id": "103",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "NumberOfPages",
+      "FullName": "Bookstore.Book.NumberOfPages"
+    },
+    {
+      "$id": "104",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Started",
+      "FullName": "Bookstore.Book.Started"
+    },
+    {
+      "$id": "105",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Title",
+      "FullName": "Bookstore.Book.Title"
+    },
+    {
+      "$id": "106",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(query,repository,parameter)=>\r\n        {\r\n            return query.Where(item=>item.NumberOfPages>=parameter.MinimumPages && item.NumberOfPages<=parameter.MaximumPages);\r\n        }",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "AverageBooks"
+    },
+    {
+      "$id": "107",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(book => book.Title.Contains(\"curiousity\"))",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.CommonMisspelling"
+    },
+    {
+      "$id": "108",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Title.Contains(\"lock\"))",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.ContainsLockMark"
+    },
+    {
+      "$id": "109",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.NumberOfPages >= 500)",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.LongBooks"
+    },
+    {
+      "$id": "110",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item=>item.NumberOfPages <= 0)",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.ShortBooks"
+    },
+    {
+      "$id": "111",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Active == null)",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.SystemRequiredActive"
+    },
+    {
+      "$id": "112",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Code == null)",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Bookstore.SystemRequiredCode"
+    },
+    {
+      "$id": "113",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(query, repository, parameter) =>\r\n            {\r\n                var filtered = query.Where(item => item.NumberOfPages >= parameter.MinimumPages);\r\n                if (parameter.ForeignBooksOnly == true)\r\n                    filtered = filtered.Where(item => item.Extension_ForeignBook.ID != null);\r\n                return filtered;\r\n            }",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "LongBooks3"
+    },
+    {
+      "$id": "114",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(items, repository, parameter) =>\r\n                    {\r\n                        if (parameter != null && parameter.ItemID.HasValue)\r\n                            return items.Where(item => item.Active == null || item.Active.Value || item.ID == parameter.ItemID.Value);\r\n                        else\r\n                            return items.Where(item => item.Active == null || item.Active.Value);\r\n                    }",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "Rhetos.Dom.DefaultConcepts.ActiveItems"
+    },
+    {
+      "$id": "115",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(query,repository,parameter)=>\r\n        {\r\n            return query.Where(item=>item.NumberOfPages<=100);\r\n        }",
+      "Source": {
+        "$ref": "10"
+      },
+      "Parameter": "ShortBooks2"
+    },
+    {
+      "$id": "116",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "117",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "118",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "PropertyNames": "Code"
+    },
+    {
+      "$id": "119",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AutoSqlQueryableDependsOnInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "11"
+      }
+    },
+    {
+      "$id": "120",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "11"
+      },
+      "Name": "NumberOfComments",
+      "FullName": "Bookstore.BookInfo.NumberOfComments"
+    },
+    {
+      "$id": "121",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "11"
+      },
+      "DependsOn": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "122",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Extension": {
+        "$ref": "11"
+      },
+      "Base": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "123",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "12"
+      },
+      "FilterType": "SystemRequiredBook",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "124",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "12"
+      },
+      "FilterName": "SystemRequiredBook",
+      "Expression": "item => item.Book == null"
+    },
+    {
+      "$id": "125",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "10"
+      },
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "Name": "Book",
+      "FullName": "Bookstore.BookTopic.Book"
+    },
+    {
+      "$id": "126",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Book == null)",
+      "Source": {
+        "$ref": "12"
+      },
+      "Parameter": "Bookstore.SystemRequiredBook"
+    },
+    {
+      "$id": "127",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "128",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "PropertyNames": "Book"
+    },
+    {
+      "$id": "129",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "PropertyNames": "Book Topic"
+    },
+    {
+      "$id": "130",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "13"
+      },
+      "FilterType": "AgeFrom_AgeTo_RangeFilter",
+      "ErrorMessage": "Value of {0} has to be less than or equal to {1}."
+    },
+    {
+      "$id": "131",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "13"
+      },
+      "FilterName": "AgeFrom_AgeTo_RangeFilter",
+      "Expression": "item => item.AgeFrom != null && item.AgeTo != null && item.AgeFrom > item.AgeTo"
+    },
+    {
+      "$id": "132",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "13"
+      },
+      "Name": "AgeFrom",
+      "FullName": "Bookstore.ChildrensBook.AgeFrom"
+    },
+    {
+      "$id": "133",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "13"
+      },
+      "Name": "AgeTo",
+      "FullName": "Bookstore.ChildrensBook.AgeTo"
+    },
+    {
+      "$id": "134",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.AgeFrom != null && item.AgeTo != null && item.AgeFrom > item.AgeTo)",
+      "Source": {
+        "$ref": "13"
+      },
+      "Parameter": "Bookstore.AgeFrom_AgeTo_RangeFilter"
+    },
+    {
+      "$id": "135",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "13"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "136",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Extension": {
+        "$ref": "13"
+      },
+      "Base": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "137",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "14"
+      },
+      "FilterType": "SystemRequiredBook",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "138",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "14"
+      },
+      "FilterName": "SystemRequiredBook",
+      "Expression": "item => item.Book == null"
+    },
+    {
+      "$id": "139",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "10"
+      },
+      "DataStructure": {
+        "$ref": "14"
+      },
+      "Name": "Book",
+      "FullName": "Bookstore.Comment.Book"
+    },
+    {
+      "$id": "140",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "14"
+      },
+      "Name": "Text",
+      "FullName": "Bookstore.Comment.Text"
+    },
+    {
+      "$id": "141",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Book == null)",
+      "Source": {
+        "$ref": "14"
+      },
+      "Parameter": "Bookstore.SystemRequiredBook"
+    },
+    {
+      "$id": "142",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "14"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "143",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "11"
+      },
+      "DependsOn": {
+        "$ref": "14"
+      }
+    },
+    {
+      "$id": "144",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "14"
+      },
+      "PropertyNames": "Book"
+    },
+    {
+      "$id": "145",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "16"
+      },
+      "Name": "ForeignBooksOnly",
+      "FullName": "Bookstore.ComplexSearch.ForeignBooksOnly"
+    },
+    {
+      "$id": "146",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "16"
+      },
+      "Name": "MaskTitles",
+      "FullName": "Bookstore.ComplexSearch.MaskTitles"
+    },
+    {
+      "$id": "147",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "16"
+      },
+      "Name": "MinimumPages",
+      "FullName": "Bookstore.ComplexSearch.MinimumPages"
+    },
+    {
+      "$id": "148",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "18"
+      },
+      "Name": "UserName",
+      "FullName": "Bookstore.Employee.UserName"
+    },
+    {
+      "$id": "149",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "18"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "150",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "19"
+      },
+      "Name": "OriginalLanguage",
+      "FullName": "Bookstore.ForeignBook.OriginalLanguage"
+    },
+    {
+      "$id": "151",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "19"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "152",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Extension": {
+        "$ref": "19"
+      },
+      "Base": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "153",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryWithGeneratedIdentifierInfo, Rhetos.Dsl.DefaultConcepts",
+      "HardcodedEntity": {
+        "$ref": "20"
+      },
+      "Name": "Biography",
+      "Identifier": "dabe2d94-7191-579a-8e95-f5d395aee8f7"
+    },
+    {
+      "$id": "154",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryWithGeneratedIdentifierInfo, Rhetos.Dsl.DefaultConcepts",
+      "HardcodedEntity": {
+        "$ref": "20"
+      },
+      "Name": "ScienceFiction",
+      "Identifier": "3fc47b39-fca4-0786-9d05-039834344591"
+    },
+    {
+      "$id": "155",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "20"
+      },
+      "Name": "Description",
+      "FullName": "Bookstore.Genre.Description"
+    },
+    {
+      "$id": "156",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "20"
+      },
+      "Name": "IsFiction",
+      "FullName": "Bookstore.Genre.IsFiction"
+    },
+    {
+      "$id": "157",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "20"
+      },
+      "Name": "Label",
+      "FullName": "Bookstore.Genre.Label"
+    },
+    {
+      "$id": "158",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "20"
+      },
+      "Name": "Name",
+      "FullName": "Bookstore.Genre.Name"
+    },
+    {
+      "$id": "159",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "20"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "160",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "22"
+      },
+      "Name": "NumberOfBooks",
+      "FullName": "Bookstore.InsertManyBooks.NumberOfBooks"
+    },
+    {
+      "$id": "161",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "22"
+      },
+      "Name": "TitlePrefix",
+      "FullName": "Bookstore.InsertManyBooks.TitlePrefix"
+    },
+    {
+      "$id": "162",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "24"
+      },
+      "Name": "ForeignBooksOnly",
+      "FullName": "Bookstore.LongBooks3.ForeignBooksOnly"
+    },
+    {
+      "$id": "163",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "24"
+      },
+      "Name": "MinimumPages",
+      "FullName": "Bookstore.LongBooks3.MinimumPages"
+    },
+    {
+      "$id": "164",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "25"
+      },
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "Name": "Author",
+      "FullName": "Bookstore.Book.Author"
+    },
+    {
+      "$id": "165",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "25"
+      },
+      "DataStructure": {
+        "$ref": "19"
+      },
+      "Name": "Translator",
+      "FullName": "Bookstore.ForeignBook.Translator"
+    },
+    {
+      "$id": "166",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "25"
+      },
+      "Name": "Name",
+      "FullName": "Bookstore.Person.Name"
+    },
+    {
+      "$id": "167",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "25"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "168",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "31"
+      },
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "Name": "Topic",
+      "FullName": "Bookstore.BookTopic.Topic"
+    },
+    {
+      "$id": "169",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "31"
+      },
+      "Name": "Name",
+      "FullName": "Bookstore.Topic.Name"
+    },
+    {
+      "$id": "170",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "31"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "171",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "31"
+      },
+      "PropertyNames": "Name"
+    },
+    {
+      "$id": "172",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnSqlFunctionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "20"
+      },
+      "DependsOn": {
+        "$ref": "33"
+      }
+    },
+    {
+      "$id": "173",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnSqlFunctionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "20"
+      },
+      "DependsOn": {
+        "$ref": "34"
+      }
+    },
+    {
+      "$id": "174",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "36"
+      },
+      "Name": "Action",
+      "FullName": "Common.AddToLog.Action"
+    },
+    {
+      "$id": "175",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "36"
+      },
+      "Name": "Description",
+      "FullName": "Common.AddToLog.Description"
+    },
+    {
+      "$id": "176",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "36"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.AddToLog.ItemId"
+    },
+    {
+      "$id": "177",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "36"
+      },
+      "Name": "TableName",
+      "FullName": "Common.AddToLog.TableName"
+    },
+    {
+      "$id": "178",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "Entity",
+      "FullName": "Common.AutoCodeCache.Entity"
+    },
+    {
+      "$id": "179",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "Grouping",
+      "FullName": "Common.AutoCodeCache.Grouping"
+    },
+    {
+      "$id": "180",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "LastCode",
+      "FullName": "Common.AutoCodeCache.LastCode"
+    },
+    {
+      "$id": "181",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "MinDigits",
+      "FullName": "Common.AutoCodeCache.MinDigits"
+    },
+    {
+      "$id": "182",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "Prefix",
+      "FullName": "Common.AutoCodeCache.Prefix"
+    },
+    {
+      "$id": "183",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "Name": "Property",
+      "FullName": "Common.AutoCodeCache.Property"
+    },
+    {
+      "$id": "184",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "185",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "PropertyNames": "Entity Property Grouping Prefix"
+    },
+    {
+      "$id": "186",
+      "$type": "Rhetos.Dsl.DefaultConcepts.QueryableExtensionInfo, Rhetos.Dsl.DefaultConcepts",
+      "Base": {
+        "$ref": "38"
+      },
+      "Expression": "(query, repository) =>\r\n\t\t{ throw new Rhetos.UserException(\"Reading Common.MyClaim without filter is not permitted. Use filter by Common.Claim or Common.Claim[].\"); }",
+      "Module": {
+        "$ref": "4"
+      },
+      "Name": "MyClaim",
+      "FullName": "Common.MyClaim"
+    },
+    {
+      "$id": "187",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DeactivatableInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "38"
+      }
+    },
+    {
+      "$id": "188",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "38"
+      }
+    },
+    {
+      "$id": "189",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.ICommonClaim, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "190",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "38"
+      },
+      "FilterType": "SystemRequiredActive",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "191",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "38"
+      },
+      "FilterName": "SystemRequiredActive",
+      "Expression": "item => item.Active == null"
+    },
+    {
+      "$id": "192",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "Name": "Active",
+      "FullName": "Common.Claim.Active"
+    },
+    {
+      "$id": "193",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "Name": "ClaimResource",
+      "FullName": "Common.Claim.ClaimResource"
+    },
+    {
+      "$id": "194",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "Name": "ClaimRight",
+      "FullName": "Common.Claim.ClaimRight"
+    },
+    {
+      "$id": "195",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Active == null)",
+      "Source": {
+        "$ref": "38"
+      },
+      "Parameter": "Common.SystemRequiredActive"
+    },
+    {
+      "$id": "196",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(items, repository, parameter) =>\r\n                    {\r\n                        if (parameter != null && parameter.ItemID.HasValue)\r\n                            return items.Where(item => item.Active == null || item.Active.Value || item.ID == parameter.ItemID.Value);\r\n                        else\r\n                            return items.Where(item => item.Active == null || item.Active.Value);\r\n                    }",
+      "Source": {
+        "$ref": "38"
+      },
+      "Parameter": "Rhetos.Dom.DefaultConcepts.ActiveItems"
+    },
+    {
+      "$id": "197",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.ICommonClaim, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "38"
+      }
+    },
+    {
+      "$id": "198",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "199",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "PropertyNames": "ClaimResource ClaimRight"
+    },
+    {
+      "$id": "200",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "LockFinish",
+      "FullName": "Common.ExclusiveLock.LockFinish"
+    },
+    {
+      "$id": "201",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "LockStart",
+      "FullName": "Common.ExclusiveLock.LockStart"
+    },
+    {
+      "$id": "202",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "ResourceID",
+      "FullName": "Common.ExclusiveLock.ResourceID"
+    },
+    {
+      "$id": "203",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "ResourceType",
+      "FullName": "Common.ExclusiveLock.ResourceType"
+    },
+    {
+      "$id": "204",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "UserName",
+      "FullName": "Common.ExclusiveLock.UserName"
+    },
+    {
+      "$id": "205",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Name": "Workstation",
+      "FullName": "Common.ExclusiveLock.Workstation"
+    },
+    {
+      "$id": "206",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "207",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "PropertyNames": "ResourceID ResourceType"
+    },
+    {
+      "$id": "208",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "40"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.ICommonFilterId, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "209",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "40"
+      },
+      "Name": "Handle",
+      "FullName": "Common.FilterId.Handle"
+    },
+    {
+      "$id": "210",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "40"
+      },
+      "Name": "Value",
+      "FullName": "Common.FilterId.Value"
+    },
+    {
+      "$id": "211",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.ICommonFilterId, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "40"
+      }
+    },
+    {
+      "$id": "212",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "40"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "213",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "40"
+      },
+      "PropertyNames": "Handle Value"
+    },
+    {
+      "$id": "214",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "41"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IKeepSynchronizedMetadata, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "215",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "41"
+      },
+      "Name": "Context",
+      "FullName": "Common.KeepSynchronizedMetadata.Context"
+    },
+    {
+      "$id": "216",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "41"
+      },
+      "Name": "Source",
+      "FullName": "Common.KeepSynchronizedMetadata.Source"
+    },
+    {
+      "$id": "217",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "41"
+      },
+      "Name": "Target",
+      "FullName": "Common.KeepSynchronizedMetadata.Target"
+    },
+    {
+      "$id": "218",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IKeepSynchronizedMetadata, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "41"
+      }
+    },
+    {
+      "$id": "219",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "41"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "220",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DenyUserEditDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      }
+    },
+    {
+      "$id": "221",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PrerequisiteAllProperties, Rhetos.Dsl.DefaultConcepts",
+      "DependsOn": {
+        "$ref": "42"
+      }
+    },
+    {
+      "$id": "222",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "Action",
+      "FullName": "Common.Log.Action"
+    },
+    {
+      "$id": "223",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "ContextInfo",
+      "FullName": "Common.Log.ContextInfo"
+    },
+    {
+      "$id": "224",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "Created",
+      "FullName": "Common.Log.Created"
+    },
+    {
+      "$id": "225",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "Description",
+      "FullName": "Common.Log.Description"
+    },
+    {
+      "$id": "226",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.Log.ItemId"
+    },
+    {
+      "$id": "227",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "TableName",
+      "FullName": "Common.Log.TableName"
+    },
+    {
+      "$id": "228",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "UserName",
+      "FullName": "Common.Log.UserName"
+    },
+    {
+      "$id": "229",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "Name": "Workstation",
+      "FullName": "Common.Log.Workstation"
+    },
+    {
+      "$id": "230",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "231",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "PropertyNames": "ItemId"
+    },
+    {
+      "$id": "232",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "42"
+      },
+      "PropertyNames": "TableName Action"
+    },
+    {
+      "$id": "233",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "42"
+      }
+    },
+    {
+      "$id": "234",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "Action",
+      "FullName": "Common.LogReader.Action"
+    },
+    {
+      "$id": "235",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "ContextInfo",
+      "FullName": "Common.LogReader.ContextInfo"
+    },
+    {
+      "$id": "236",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "Created",
+      "FullName": "Common.LogReader.Created"
+    },
+    {
+      "$id": "237",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "Description",
+      "FullName": "Common.LogReader.Description"
+    },
+    {
+      "$id": "238",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.LogReader.ItemId"
+    },
+    {
+      "$id": "239",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "TableName",
+      "FullName": "Common.LogReader.TableName"
+    },
+    {
+      "$id": "240",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "UserName",
+      "FullName": "Common.LogReader.UserName"
+    },
+    {
+      "$id": "241",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "43"
+      },
+      "Name": "Workstation",
+      "FullName": "Common.LogReader.Workstation"
+    },
+    {
+      "$id": "242",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "43"
+      },
+      "DependsOn": {
+        "$ref": "42"
+      }
+    },
+    {
+      "$id": "243",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DenyUserEditDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      }
+    },
+    {
+      "$id": "244",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "44"
+      },
+      "FilterType": "SystemRequiredLog",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "245",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "44"
+      },
+      "FilterName": "SystemRequiredLog",
+      "Expression": "item => item.Log == null"
+    },
+    {
+      "$id": "246",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PrerequisiteAllProperties, Rhetos.Dsl.DefaultConcepts",
+      "DependsOn": {
+        "$ref": "44"
+      }
+    },
+    {
+      "$id": "247",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.LogRelatedItem.ItemId"
+    },
+    {
+      "$id": "248",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "42"
+      },
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "Name": "Log",
+      "FullName": "Common.LogRelatedItem.Log"
+    },
+    {
+      "$id": "249",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "Name": "Relation",
+      "FullName": "Common.LogRelatedItem.Relation"
+    },
+    {
+      "$id": "250",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "Name": "TableName",
+      "FullName": "Common.LogRelatedItem.TableName"
+    },
+    {
+      "$id": "251",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Log == null)",
+      "Source": {
+        "$ref": "44"
+      },
+      "Parameter": "Common.SystemRequiredLog"
+    },
+    {
+      "$id": "252",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "253",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "PropertyNames": "ItemId"
+    },
+    {
+      "$id": "254",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "PropertyNames": "Log"
+    },
+    {
+      "$id": "255",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "44"
+      },
+      "PropertyNames": "TableName"
+    },
+    {
+      "$id": "256",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "45"
+      },
+      "Source": {
+        "$ref": "44"
+      }
+    },
+    {
+      "$id": "257",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "45"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.LogRelatedItemReader.ItemId"
+    },
+    {
+      "$id": "258",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "42"
+      },
+      "DataStructure": {
+        "$ref": "45"
+      },
+      "Name": "Log",
+      "FullName": "Common.LogRelatedItemReader.Log"
+    },
+    {
+      "$id": "259",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "45"
+      },
+      "Name": "Relation",
+      "FullName": "Common.LogRelatedItemReader.Relation"
+    },
+    {
+      "$id": "260",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "45"
+      },
+      "Name": "TableName",
+      "FullName": "Common.LogRelatedItemReader.TableName"
+    },
+    {
+      "$id": "261",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "45"
+      },
+      "DependsOn": {
+        "$ref": "44"
+      }
+    },
+    {
+      "$id": "262",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "46"
+      }
+    },
+    {
+      "$id": "263",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IPrincipal, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "264",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "Name": "Name",
+      "FullName": "Common.Principal.Name"
+    },
+    {
+      "$id": "265",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IPrincipal, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "46"
+      }
+    },
+    {
+      "$id": "266",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "267",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "268",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "46"
+      }
+    },
+    {
+      "$id": "269",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "PropertyNames": "Name"
+    },
+    {
+      "$id": "270",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "47"
+      }
+    },
+    {
+      "$id": "271",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IPrincipalHasRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "272",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "47"
+      },
+      "FilterType": "SystemRequiredPrincipal",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "273",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "47"
+      },
+      "FilterName": "SystemRequiredPrincipal",
+      "Expression": "item => item.Principal == null"
+    },
+    {
+      "$id": "274",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "46"
+      },
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "Name": "Principal",
+      "FullName": "Common.PrincipalHasRole.Principal"
+    },
+    {
+      "$id": "275",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Principal == null)",
+      "Source": {
+        "$ref": "47"
+      },
+      "Parameter": "Common.SystemRequiredPrincipal"
+    },
+    {
+      "$id": "276",
+      "$type": "Rhetos.Dsl.DefaultConcepts.QueryExpressionInfo, Rhetos.Dsl.DefaultConcepts",
+      "QueryImplementation": "parameter => Query().Where(item => item.Principal.ID == parameter.ID)",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "Parameter": "Rhetos.Dom.DefaultConcepts.IPrincipal"
+    },
+    {
+      "$id": "277",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IPrincipalHasRole, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "47"
+      }
+    },
+    {
+      "$id": "278",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "279",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "280",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "47"
+      }
+    },
+    {
+      "$id": "281",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "PropertyNames": "Principal"
+    },
+    {
+      "$id": "282",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "PropertyNames": "Principal Role"
+    },
+    {
+      "$id": "283",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "48"
+      }
+    },
+    {
+      "$id": "284",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IPrincipalPermission, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "285",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "48"
+      },
+      "FilterType": "SystemRequiredClaim",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "286",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "48"
+      },
+      "FilterType": "SystemRequiredPrincipal",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "287",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "48"
+      },
+      "FilterName": "SystemRequiredClaim",
+      "Expression": "item => item.Claim == null"
+    },
+    {
+      "$id": "288",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "48"
+      },
+      "FilterName": "SystemRequiredPrincipal",
+      "Expression": "item => item.Principal == null"
+    },
+    {
+      "$id": "289",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "38"
+      },
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "Name": "Claim",
+      "FullName": "Common.PrincipalPermission.Claim"
+    },
+    {
+      "$id": "290",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "Name": "IsAuthorized",
+      "FullName": "Common.PrincipalPermission.IsAuthorized"
+    },
+    {
+      "$id": "291",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "46"
+      },
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "Name": "Principal",
+      "FullName": "Common.PrincipalPermission.Principal"
+    },
+    {
+      "$id": "292",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Claim == null)",
+      "Source": {
+        "$ref": "48"
+      },
+      "Parameter": "Common.SystemRequiredClaim"
+    },
+    {
+      "$id": "293",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Principal == null)",
+      "Source": {
+        "$ref": "48"
+      },
+      "Parameter": "Common.SystemRequiredPrincipal"
+    },
+    {
+      "$id": "294",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IPrincipalPermission, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "48"
+      }
+    },
+    {
+      "$id": "295",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "296",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "297",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "48"
+      }
+    },
+    {
+      "$id": "298",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyNames": "Claim"
+    },
+    {
+      "$id": "299",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyNames": "Principal"
+    },
+    {
+      "$id": "300",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyNames": "Principal Claim"
+    },
+    {
+      "$id": "301",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "42"
+      }
+    },
+    {
+      "$id": "302",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Action",
+      "FullName": "Common.RelatedEventsSource.Action"
+    },
+    {
+      "$id": "303",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "ContextInfo",
+      "FullName": "Common.RelatedEventsSource.ContextInfo"
+    },
+    {
+      "$id": "304",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DateTimePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Created",
+      "FullName": "Common.RelatedEventsSource.Created"
+    },
+    {
+      "$id": "305",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LongStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Description",
+      "FullName": "Common.RelatedEventsSource.Description"
+    },
+    {
+      "$id": "306",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "ItemId",
+      "FullName": "Common.RelatedEventsSource.ItemId"
+    },
+    {
+      "$id": "307",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "43"
+      },
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Log",
+      "FullName": "Common.RelatedEventsSource.Log"
+    },
+    {
+      "$id": "308",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "RelatedToItem",
+      "FullName": "Common.RelatedEventsSource.RelatedToItem"
+    },
+    {
+      "$id": "309",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "RelatedToTable",
+      "FullName": "Common.RelatedEventsSource.RelatedToTable"
+    },
+    {
+      "$id": "310",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Relation",
+      "FullName": "Common.RelatedEventsSource.Relation"
+    },
+    {
+      "$id": "311",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "TableName",
+      "FullName": "Common.RelatedEventsSource.TableName"
+    },
+    {
+      "$id": "312",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "UserName",
+      "FullName": "Common.RelatedEventsSource.UserName"
+    },
+    {
+      "$id": "313",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "49"
+      },
+      "Name": "Workstation",
+      "FullName": "Common.RelatedEventsSource.Workstation"
+    },
+    {
+      "$id": "314",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "49"
+      },
+      "DependsOn": {
+        "$ref": "43"
+      }
+    },
+    {
+      "$id": "315",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "49"
+      },
+      "DependsOn": {
+        "$ref": "45"
+      }
+    },
+    {
+      "$id": "316",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "50"
+      },
+      "Name": "ResourceID",
+      "FullName": "Common.ReleaseLock.ResourceID"
+    },
+    {
+      "$id": "317",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "50"
+      },
+      "Name": "ResourceType",
+      "FullName": "Common.ReleaseLock.ResourceType"
+    },
+    {
+      "$id": "318",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "51"
+      }
+    },
+    {
+      "$id": "319",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "320",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "51"
+      },
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "Name": "Role",
+      "FullName": "Common.PrincipalHasRole.Role"
+    },
+    {
+      "$id": "321",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "Name": "Name",
+      "FullName": "Common.Role.Name"
+    },
+    {
+      "$id": "322",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IRole, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "51"
+      }
+    },
+    {
+      "$id": "323",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "324",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "325",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "51"
+      }
+    },
+    {
+      "$id": "326",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "PropertyNames": "Name"
+    },
+    {
+      "$id": "327",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "52"
+      }
+    },
+    {
+      "$id": "328",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IRoleInheritsRole, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "329",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "52"
+      },
+      "FilterType": "SystemRequiredUsersFrom",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "330",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "52"
+      },
+      "FilterName": "SystemRequiredUsersFrom",
+      "Expression": "item => item.UsersFrom == null"
+    },
+    {
+      "$id": "331",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "51"
+      },
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "Name": "PermissionsFrom",
+      "FullName": "Common.RoleInheritsRole.PermissionsFrom"
+    },
+    {
+      "$id": "332",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "51"
+      },
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "Name": "UsersFrom",
+      "FullName": "Common.RoleInheritsRole.UsersFrom"
+    },
+    {
+      "$id": "333",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.UsersFrom == null)",
+      "Source": {
+        "$ref": "52"
+      },
+      "Parameter": "Common.SystemRequiredUsersFrom"
+    },
+    {
+      "$id": "334",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IRoleInheritsRole, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "52"
+      }
+    },
+    {
+      "$id": "335",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "336",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "337",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "52"
+      }
+    },
+    {
+      "$id": "338",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "PropertyNames": "UsersFrom"
+    },
+    {
+      "$id": "339",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "PropertyNames": "UsersFrom PermissionsFrom"
+    },
+    {
+      "$id": "340",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntityLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "53"
+      }
+    },
+    {
+      "$id": "341",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ImplementsInterfaceInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "InterfaceType": "Rhetos.Dom.DefaultConcepts.IRolePermission, Rhetos.Dom.DefaultConcepts.Interfaces"
+    },
+    {
+      "$id": "342",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "53"
+      },
+      "FilterType": "SystemRequiredClaim",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "343",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "53"
+      },
+      "FilterType": "SystemRequiredRole",
+      "ErrorMessage": "System required property {0} is not set."
+    },
+    {
+      "$id": "344",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "53"
+      },
+      "FilterName": "SystemRequiredClaim",
+      "Expression": "item => item.Claim == null"
+    },
+    {
+      "$id": "345",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ItemFilterInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "53"
+      },
+      "FilterName": "SystemRequiredRole",
+      "Expression": "item => item.Role == null"
+    },
+    {
+      "$id": "346",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "38"
+      },
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "Name": "Claim",
+      "FullName": "Common.RolePermission.Claim"
+    },
+    {
+      "$id": "347",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "Name": "IsAuthorized",
+      "FullName": "Common.RolePermission.IsAuthorized"
+    },
+    {
+      "$id": "348",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SimpleReferencePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Referenced": {
+        "$ref": "51"
+      },
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "Name": "Role",
+      "FullName": "Common.RolePermission.Role"
+    },
+    {
+      "$id": "349",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Claim == null)",
+      "Source": {
+        "$ref": "53"
+      },
+      "Parameter": "Common.SystemRequiredClaim"
+    },
+    {
+      "$id": "350",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ComposableFilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Expression": "(source, repository, parameter) => source.Where(item => item.Role == null)",
+      "Source": {
+        "$ref": "53"
+      },
+      "Parameter": "Common.SystemRequiredRole"
+    },
+    {
+      "$id": "351",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationInfo, Rhetos.Dsl.DefaultConcepts",
+      "InterfaceAssemblyQualifiedName": "Rhetos.Dom.DefaultConcepts.IRolePermission, Rhetos.Dom.DefaultConcepts.Interfaces, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null",
+      "DataStructure": {
+        "$ref": "53"
+      }
+    },
+    {
+      "$id": "352",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyName": "_authorizationDataCache",
+      "PropertyType": "Rhetos.Dom.DefaultConcepts.AuthorizationDataCache, Rhetos.Dom.DefaultConcepts"
+    },
+    {
+      "$id": "353",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyName": "_sqlUtility",
+      "PropertyType": "Rhetos.Utilities.ISqlUtility, Rhetos.Utilities"
+    },
+    {
+      "$id": "354",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SaveMethodInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entity": {
+        "$ref": "53"
+      }
+    },
+    {
+      "$id": "355",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyNames": "Claim"
+    },
+    {
+      "$id": "356",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyNames": "Role"
+    },
+    {
+      "$id": "357",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyNames": "Role Claim"
+    },
+    {
+      "$id": "358",
+      "$type": "Rhetos.Dsl.DefaultConcepts.GuidPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "56"
+      },
+      "Name": "ResourceID",
+      "FullName": "Common.SetLock.ResourceID"
+    },
+    {
+      "$id": "359",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "56"
+      },
+      "Name": "ResourceType",
+      "FullName": "Common.SetLock.ResourceType"
+    },
+    {
+      "$id": "360",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RepositoryUsesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "56"
+      },
+      "PropertyName": "_localizer",
+      "PropertyType": "Rhetos.Utilities.ILocalizer, Rhetos.Utilities"
+    },
+    {
+      "$id": "361",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "76"
+      },
+      "DependsOn": {
+        "$ref": "37"
+      }
+    },
+    {
+      "$id": "362",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnDataStructureInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "77"
+      },
+      "DependsOn": {
+        "$ref": "37"
+      }
+    },
+    {
+      "$id": "363",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseTakePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Browse": {
+        "$ref": "80"
+      },
+      "Name": "AuthorName",
+      "Path": "Author.Name"
+    },
+    {
+      "$id": "364",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseTakeNamedPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Browse": {
+        "$ref": "80"
+      },
+      "Name": "NumberOfTopics",
+      "Path": "Extension_BookInfo.NumberOfComments"
+    },
+    {
+      "$id": "365",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseTakePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Browse": {
+        "$ref": "80"
+      },
+      "Name": "Title",
+      "Path": "Title"
+    },
+    {
+      "$id": "366",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "80"
+      },
+      "Name": "AuthorName",
+      "FullName": "Bookstore.BookStoreGrid.AuthorName"
+    },
+    {
+      "$id": "367",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "80"
+      },
+      "Name": "NumberOfTopics",
+      "FullName": "Bookstore.BookStoreGrid.NumberOfTopics"
+    },
+    {
+      "$id": "368",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ShortStringPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "80"
+      },
+      "Name": "Title",
+      "FullName": "Bookstore.BookStoreGrid.Title"
+    },
+    {
+      "$id": "369",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Extension": {
+        "$ref": "80"
+      },
+      "Base": {
+        "$ref": "10"
+      }
+    },
+    {
+      "$id": "370",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      }
+    },
+    {
+      "$id": "371",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Bool Bookstore.Book.Active\"",
+      "InvalidData": {
+        "$ref": "88"
+      }
+    },
+    {
+      "$id": "372",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"ShortString Bookstore.Book.Code\"",
+      "InvalidData": {
+        "$ref": "89"
+      }
+    },
+    {
+      "$id": "373",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "99"
+      },
+      "InvalidData": {
+        "$ref": "88"
+      },
+      "Key": "Property",
+      "Value": "Active"
+    },
+    {
+      "$id": "374",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "99"
+      }
+    },
+    {
+      "$id": "375",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "99"
+      }
+    },
+    {
+      "$id": "376",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DefaultValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "100"
+      },
+      "Expression": "item => DateTime.Now.Date",
+      "Dependency_DefaultValues": {
+        "$ref": "82"
+      }
+    },
+    {
+      "$id": "377",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "100"
+      }
+    },
+    {
+      "$id": "378",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AutoCodePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "101"
+      }
+    },
+    {
+      "$id": "379",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "101"
+      },
+      "InvalidData": {
+        "$ref": "89"
+      },
+      "Key": "Property",
+      "Value": "Code"
+    },
+    {
+      "$id": "380",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "101"
+      }
+    },
+    {
+      "$id": "381",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "101"
+      }
+    },
+    {
+      "$id": "382",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "102"
+      }
+    },
+    {
+      "$id": "383",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "103"
+      }
+    },
+    {
+      "$id": "384",
+      "$type": "Rhetos.Dsl.DefaultConcepts.CreationTimeInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "104"
+      }
+    },
+    {
+      "$id": "385",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DenyUserEditPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "104"
+      }
+    },
+    {
+      "$id": "386",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "104"
+      }
+    },
+    {
+      "$id": "387",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ModificationTimeOfInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "102"
+      },
+      "ModifiedProperty": {
+        "$ref": "105"
+      },
+      "Dependency_Infrastructure": {
+        "$ref": "98"
+      }
+    },
+    {
+      "$id": "388",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "105"
+      }
+    },
+    {
+      "$id": "389",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "117"
+      }
+    },
+    {
+      "$id": "390",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "118"
+      },
+      "Property": {
+        "$ref": "101"
+      }
+    },
+    {
+      "$id": "391",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "10"
+      },
+      "PropertyNames": "Code",
+      "Dependency_SqlIndex": {
+        "$ref": "118"
+      }
+    },
+    {
+      "$id": "392",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "UniqueReference": {
+        "$ref": "122"
+      }
+    },
+    {
+      "$id": "393",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Bookstore.BookTopic.Book\"",
+      "InvalidData": {
+        "$ref": "123"
+      }
+    },
+    {
+      "$id": "394",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "125"
+      },
+      "InvalidData": {
+        "$ref": "123"
+      },
+      "Key": "Property",
+      "Value": "Book"
+    },
+    {
+      "$id": "395",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "396",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "397",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "398",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "399",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "128"
+      },
+      "Property": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "400",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "129"
+      },
+      "Property": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "401",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "12"
+      },
+      "PropertyNames": "Book Topic",
+      "Dependency_SqlIndex": {
+        "$ref": "129"
+      }
+    },
+    {
+      "$id": "402",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"AgeFrom\", @\"AgeTo\"",
+      "InvalidData": {
+        "$ref": "130"
+      }
+    },
+    {
+      "$id": "403",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "132"
+      },
+      "InvalidData": {
+        "$ref": "130"
+      },
+      "Key": "Property",
+      "Value": "AgeFrom"
+    },
+    {
+      "$id": "404",
+      "$type": "Rhetos.Dsl.DefaultConcepts.IntegerRangeInfo, Rhetos.Dsl.DefaultConcepts",
+      "IntegerToName": "AgeTo",
+      "PropertyFrom": {
+        "$ref": "132"
+      },
+      "PropertyTo": {
+        "$ref": "133"
+      }
+    },
+    {
+      "$id": "405",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "UniqueReference": {
+        "$ref": "136"
+      }
+    },
+    {
+      "$id": "406",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Bookstore.Comment.Book\"",
+      "InvalidData": {
+        "$ref": "137"
+      }
+    },
+    {
+      "$id": "407",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "139"
+      },
+      "InvalidData": {
+        "$ref": "137"
+      },
+      "Key": "Property",
+      "Value": "Book"
+    },
+    {
+      "$id": "408",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "139"
+      }
+    },
+    {
+      "$id": "409",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "139"
+      }
+    },
+    {
+      "$id": "410",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "139"
+      }
+    },
+    {
+      "$id": "411",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "139"
+      }
+    },
+    {
+      "$id": "412",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "144"
+      },
+      "Property": {
+        "$ref": "139"
+      }
+    },
+    {
+      "$id": "413",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "UniqueReference": {
+        "$ref": "152"
+      }
+    },
+    {
+      "$id": "414",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "153"
+      },
+      "PropertyName": "Description",
+      "Value": "A written narrative of a persons life.",
+      "Property": {
+        "$ref": "155"
+      }
+    },
+    {
+      "$id": "415",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "154"
+      },
+      "PropertyName": "Description",
+      "Value": "A speculative fiction with imagined elements that are inspired by natural sciences or social sciences.",
+      "Property": {
+        "$ref": "155"
+      }
+    },
+    {
+      "$id": "416",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "153"
+      },
+      "PropertyName": "IsFiction",
+      "Value": "0",
+      "Property": {
+        "$ref": "156"
+      }
+    },
+    {
+      "$id": "417",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "154"
+      },
+      "PropertyName": "IsFiction",
+      "Value": "1",
+      "Property": {
+        "$ref": "156"
+      }
+    },
+    {
+      "$id": "418",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "153"
+      },
+      "PropertyName": "Label",
+      "Value": "Biography",
+      "Property": {
+        "$ref": "157"
+      }
+    },
+    {
+      "$id": "419",
+      "$type": "Rhetos.Dsl.DefaultConcepts.EntryValueInfo, Rhetos.Dsl.DefaultConcepts",
+      "Entry": {
+        "$ref": "154"
+      },
+      "PropertyName": "Label",
+      "Value": "Science fiction",
+      "Property": {
+        "$ref": "157"
+      }
+    },
+    {
+      "$id": "420",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "83"
+      },
+      "Property": {
+        "$ref": "164"
+      }
+    },
+    {
+      "$id": "421",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "164"
+      }
+    },
+    {
+      "$id": "422",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "165"
+      }
+    },
+    {
+      "$id": "423",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "168"
+      }
+    },
+    {
+      "$id": "424",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "168"
+      }
+    },
+    {
+      "$id": "425",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "169"
+      }
+    },
+    {
+      "$id": "426",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniquePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "169"
+      }
+    },
+    {
+      "$id": "427",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "171"
+      },
+      "Property": {
+        "$ref": "169"
+      }
+    },
+    {
+      "$id": "428",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "31"
+      },
+      "PropertyNames": "Name",
+      "Dependency_SqlIndex": {
+        "$ref": "171"
+      }
+    },
+    {
+      "$id": "429",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "178"
+      },
+      "InitialValueSqlExpression": "''"
+    },
+    {
+      "$id": "430",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "179"
+      },
+      "InitialValueSqlExpression": "''"
+    },
+    {
+      "$id": "431",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "180"
+      },
+      "InitialValueSqlExpression": "0"
+    },
+    {
+      "$id": "432",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "181"
+      },
+      "InitialValueSqlExpression": "0"
+    },
+    {
+      "$id": "433",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "182"
+      },
+      "InitialValueSqlExpression": "''"
+    },
+    {
+      "$id": "434",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlNotNullInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "183"
+      },
+      "InitialValueSqlExpression": "''"
+    },
+    {
+      "$id": "435",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnSqlIndexInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "76"
+      },
+      "DependsOn": {
+        "$ref": "185"
+      }
+    },
+    {
+      "$id": "436",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnSqlIndexInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "77"
+      },
+      "DependsOn": {
+        "$ref": "185"
+      }
+    },
+    {
+      "$id": "437",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "185"
+      }
+    },
+    {
+      "$id": "438",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "185"
+      },
+      "Property": {
+        "$ref": "178"
+      }
+    },
+    {
+      "$id": "439",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "37"
+      },
+      "PropertyNames": "Entity Property Grouping Prefix",
+      "Dependency_SqlIndex": {
+        "$ref": "185"
+      }
+    },
+    {
+      "$id": "440",
+      "$type": "Rhetos.Dsl.DefaultConcepts.FilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "186"
+      },
+      "Parameter": "Common.Claim",
+      "Expression": "(repository, parameter) =>\r\n\t\t\t{\r\n\t\t\t\tvar claim = repository.Common.Claim.Query().Where(item => item.ClaimResource == parameter.ClaimResource && item.ClaimRight == parameter.ClaimRight).SingleOrDefault();\r\n\t\t\t\tif (claim == null)\r\n\t\t\t\t\tthrow new Rhetos.UserException(\"Claim {0}-{1} does not exist.\",\r\n\t\t\t\t\t\tnew[] { parameter.ClaimResource, parameter.ClaimRight }, null, null);\r\n\t\t\t\t\r\n\t\t\t\treturn repository.Common.MyClaim.Filter(new[] { claim });\r\n\t\t\t}"
+    },
+    {
+      "$id": "441",
+      "$type": "Rhetos.Dsl.DefaultConcepts.FilterByInfo, Rhetos.Dsl.DefaultConcepts",
+      "Source": {
+        "$ref": "186"
+      },
+      "Parameter": "IEnumerable<Common.Claim>",
+      "Expression": "(repository, claims) =>\r\n\t\t\t{\r\n                var securityClaims = claims.Select(c => new Rhetos.Security.Claim(c.ClaimResource, c.ClaimRight)).ToList();\r\n                var authorizations = _executionContext.AuthorizationManager.GetAuthorizations(securityClaims);\r\n\t\t\t\r\n                return claims.Zip(authorizations, (claim, authorized) => new Common.MyClaim {\r\n                        ID = claim.ID,\r\n                        Applies = authorized\r\n                    }).ToArray();\r\n             }"
+    },
+    {
+      "$id": "442",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "186"
+      },
+      "Parameter": "Common.Claim"
+    },
+    {
+      "$id": "443",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "186"
+      },
+      "Parameter": "IEnumerable<Common.Claim>"
+    },
+    {
+      "$id": "444",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BoolPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "186"
+      },
+      "Name": "Applies",
+      "FullName": "Common.MyClaim.Applies"
+    },
+    {
+      "$id": "445",
+      "$type": "Rhetos.Dsl.DefaultConcepts.DataStructureExtendsInfo, Rhetos.Dsl.DefaultConcepts",
+      "Extension": {
+        "$ref": "186"
+      },
+      "Base": {
+        "$ref": "38"
+      }
+    },
+    {
+      "$id": "446",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "188"
+      }
+    },
+    {
+      "$id": "447",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "189"
+      }
+    },
+    {
+      "$id": "448",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Bool Common.Claim.Active\"",
+      "InvalidData": {
+        "$ref": "190"
+      }
+    },
+    {
+      "$id": "449",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "192"
+      },
+      "InvalidData": {
+        "$ref": "190"
+      },
+      "Key": "Property",
+      "Value": "Active"
+    },
+    {
+      "$id": "450",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "188"
+      },
+      "Property": {
+        "$ref": "192"
+      }
+    },
+    {
+      "$id": "451",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "192"
+      }
+    },
+    {
+      "$id": "452",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "188"
+      },
+      "Property": {
+        "$ref": "193"
+      }
+    },
+    {
+      "$id": "453",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "193"
+      }
+    },
+    {
+      "$id": "454",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "188"
+      },
+      "Property": {
+        "$ref": "194"
+      }
+    },
+    {
+      "$id": "455",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "194"
+      }
+    },
+    {
+      "$id": "456",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniquePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "Property1": {
+        "$ref": "193"
+      },
+      "Property2": {
+        "$ref": "194"
+      }
+    },
+    {
+      "$id": "457",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "199"
+      },
+      "Property": {
+        "$ref": "193"
+      }
+    },
+    {
+      "$id": "458",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "38"
+      },
+      "PropertyNames": "ClaimResource ClaimRight",
+      "Dependency_SqlIndex": {
+        "$ref": "199"
+      }
+    },
+    {
+      "$id": "459",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "200"
+      }
+    },
+    {
+      "$id": "460",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "201"
+      }
+    },
+    {
+      "$id": "461",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "202"
+      }
+    },
+    {
+      "$id": "462",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "203"
+      }
+    },
+    {
+      "$id": "463",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniquePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "Property1": {
+        "$ref": "202"
+      },
+      "Property2": {
+        "$ref": "203"
+      }
+    },
+    {
+      "$id": "464",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "204"
+      }
+    },
+    {
+      "$id": "465",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "205"
+      }
+    },
+    {
+      "$id": "466",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "207"
+      },
+      "Property": {
+        "$ref": "202"
+      }
+    },
+    {
+      "$id": "467",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "39"
+      },
+      "PropertyNames": "ResourceID ResourceType",
+      "Dependency_SqlIndex": {
+        "$ref": "207"
+      }
+    },
+    {
+      "$id": "468",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "208"
+      }
+    },
+    {
+      "$id": "469",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "213"
+      }
+    },
+    {
+      "$id": "470",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "213"
+      },
+      "Property": {
+        "$ref": "209"
+      }
+    },
+    {
+      "$id": "471",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "214"
+      }
+    },
+    {
+      "$id": "472",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "222"
+      }
+    },
+    {
+      "$id": "473",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "222"
+      }
+    },
+    {
+      "$id": "474",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "222"
+      }
+    },
+    {
+      "$id": "475",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "222"
+      }
+    },
+    {
+      "$id": "476",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "223"
+      }
+    },
+    {
+      "$id": "477",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "223"
+      }
+    },
+    {
+      "$id": "478",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDefaultPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "223"
+      },
+      "Definition": "CONVERT(varchar(128),LEFT(context_info(), ISNULL(NULLIF(CHARINDEX(0x00, context_info())-1,-1),128)),0)"
+    },
+    {
+      "$id": "479",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "223"
+      }
+    },
+    {
+      "$id": "480",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "224"
+      }
+    },
+    {
+      "$id": "481",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "224"
+      }
+    },
+    {
+      "$id": "482",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "224"
+      }
+    },
+    {
+      "$id": "483",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDefaultPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "224"
+      },
+      "Definition": "SYSDATETIME()"
+    },
+    {
+      "$id": "484",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "224"
+      }
+    },
+    {
+      "$id": "485",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "225"
+      }
+    },
+    {
+      "$id": "486",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "225"
+      }
+    },
+    {
+      "$id": "487",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "225"
+      }
+    },
+    {
+      "$id": "488",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "226"
+      }
+    },
+    {
+      "$id": "489",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "226"
+      }
+    },
+    {
+      "$id": "490",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "226"
+      }
+    },
+    {
+      "$id": "491",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "226"
+      }
+    },
+    {
+      "$id": "492",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "227"
+      }
+    },
+    {
+      "$id": "493",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "227"
+      }
+    },
+    {
+      "$id": "494",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "227"
+      }
+    },
+    {
+      "$id": "495",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "228"
+      }
+    },
+    {
+      "$id": "496",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "228"
+      }
+    },
+    {
+      "$id": "497",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "228"
+      }
+    },
+    {
+      "$id": "498",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDefaultPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "228"
+      },
+      "Definition": "suser_sname()"
+    },
+    {
+      "$id": "499",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "228"
+      }
+    },
+    {
+      "$id": "500",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "43"
+      },
+      "Source": {
+        "$ref": "229"
+      }
+    },
+    {
+      "$id": "501",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "49"
+      },
+      "Source": {
+        "$ref": "229"
+      }
+    },
+    {
+      "$id": "502",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "229"
+      }
+    },
+    {
+      "$id": "503",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDefaultPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "229"
+      },
+      "Definition": "host_name()"
+    },
+    {
+      "$id": "504",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "221"
+      },
+      "DependsOn": {
+        "$ref": "229"
+      }
+    },
+    {
+      "$id": "505",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "231"
+      },
+      "Property": {
+        "$ref": "226"
+      }
+    },
+    {
+      "$id": "506",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "232"
+      },
+      "Property": {
+        "$ref": "227"
+      }
+    },
+    {
+      "$id": "507",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "234"
+      }
+    },
+    {
+      "$id": "508",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "236"
+      }
+    },
+    {
+      "$id": "509",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "240"
+      }
+    },
+    {
+      "$id": "510",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "241"
+      }
+    },
+    {
+      "$id": "511",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.LogRelatedItem.Log\"",
+      "InvalidData": {
+        "$ref": "244"
+      }
+    },
+    {
+      "$id": "512",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "45"
+      },
+      "Source": {
+        "$ref": "247"
+      }
+    },
+    {
+      "$id": "513",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "246"
+      },
+      "DependsOn": {
+        "$ref": "247"
+      }
+    },
+    {
+      "$id": "514",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "247"
+      }
+    },
+    {
+      "$id": "515",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "248"
+      },
+      "InvalidData": {
+        "$ref": "244"
+      },
+      "Key": "Property",
+      "Value": "Log"
+    },
+    {
+      "$id": "516",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "45"
+      },
+      "Source": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "517",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "518",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "519",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "520",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "521",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "246"
+      },
+      "DependsOn": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "522",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "523",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "45"
+      },
+      "Source": {
+        "$ref": "249"
+      }
+    },
+    {
+      "$id": "524",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "246"
+      },
+      "DependsOn": {
+        "$ref": "249"
+      }
+    },
+    {
+      "$id": "525",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyFromInfo, Rhetos.Dsl.DefaultConcepts",
+      "Destination": {
+        "$ref": "45"
+      },
+      "Source": {
+        "$ref": "250"
+      }
+    },
+    {
+      "$id": "526",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlDependsOnPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Dependent": {
+        "$ref": "246"
+      },
+      "DependsOn": {
+        "$ref": "250"
+      }
+    },
+    {
+      "$id": "527",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "250"
+      }
+    },
+    {
+      "$id": "528",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "253"
+      },
+      "Property": {
+        "$ref": "247"
+      }
+    },
+    {
+      "$id": "529",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "254"
+      },
+      "Property": {
+        "$ref": "248"
+      }
+    },
+    {
+      "$id": "530",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "255"
+      },
+      "Property": {
+        "$ref": "250"
+      }
+    },
+    {
+      "$id": "531",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "258"
+      }
+    },
+    {
+      "$id": "532",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "262"
+      }
+    },
+    {
+      "$id": "533",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "263"
+      }
+    },
+    {
+      "$id": "534",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "262"
+      },
+      "Property": {
+        "$ref": "264"
+      }
+    },
+    {
+      "$id": "535",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "264"
+      }
+    },
+    {
+      "$id": "536",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniquePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "264"
+      }
+    },
+    {
+      "$id": "537",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "268"
+      }
+    },
+    {
+      "$id": "538",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "268"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var principalInfos = ((IEnumerable<Rhetos.Dom.DefaultConcepts.IPrincipal>)insertedNew).Concat(updatedNew)\r\n                    .Concat(updatedOld.Select(p => new Rhetos.Dom.DefaultConcepts.PrincipalInfo { ID = p.ID, Name = p.Name }))\r\n                    .Concat(deletedOld.Select(p => new Rhetos.Dom.DefaultConcepts.PrincipalInfo { ID = p.ID, Name = p.Name }));\r\n                    _authorizationDataCache.ClearCachePrincipals(principalInfos);"
+    },
+    {
+      "$id": "539",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "269"
+      },
+      "Property": {
+        "$ref": "264"
+      }
+    },
+    {
+      "$id": "540",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "46"
+      },
+      "PropertyNames": "Name",
+      "Dependency_SqlIndex": {
+        "$ref": "269"
+      }
+    },
+    {
+      "$id": "541",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "270"
+      }
+    },
+    {
+      "$id": "542",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "270"
+      },
+      "Table": "Common.Principal",
+      "Column": "PrincipalID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "543",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "271"
+      }
+    },
+    {
+      "$id": "544",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.PrincipalHasRole.Principal\"",
+      "InvalidData": {
+        "$ref": "272"
+      }
+    },
+    {
+      "$id": "545",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "274"
+      },
+      "InvalidData": {
+        "$ref": "272"
+      },
+      "Key": "Property",
+      "Value": "Principal"
+    },
+    {
+      "$id": "546",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "270"
+      },
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "547",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "548",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "549",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "550",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "551",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "552",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "280"
+      }
+    },
+    {
+      "$id": "553",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "280"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var principalIds = insertedNew.Concat(updatedNew).Select(item => item.PrincipalID)\r\n                        .Concat(updatedOld.Select(item => item.PrincipalID))\r\n                        .Concat(deletedOld.Select(item => item.PrincipalID))\r\n                        .Where(pid => pid != null).Select(pid => pid.Value)\r\n                        .Distinct().ToList();\r\n                    var principalInfos = _domRepository.Common.Principal.Query(principalIds)\r\n                        .Select(p => new Rhetos.Dom.DefaultConcepts.PrincipalInfo { ID = p.ID, Name = p.Name });\r\n                    _authorizationDataCache.ClearCachePrincipals(principalInfos);"
+    },
+    {
+      "$id": "554",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "281"
+      },
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "555",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "282"
+      }
+    },
+    {
+      "$id": "556",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "282"
+      },
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "557",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "47"
+      },
+      "PropertyNames": "Principal Role",
+      "Dependency_SqlIndex": {
+        "$ref": "282"
+      }
+    },
+    {
+      "$id": "558",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "283"
+      }
+    },
+    {
+      "$id": "559",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "283"
+      },
+      "Table": "Common.Claim",
+      "Column": "ClaimID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "560",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "283"
+      },
+      "Table": "Common.Principal",
+      "Column": "PrincipalID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "561",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "284"
+      }
+    },
+    {
+      "$id": "562",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.PrincipalPermission.Claim\"",
+      "InvalidData": {
+        "$ref": "285"
+      }
+    },
+    {
+      "$id": "563",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.PrincipalPermission.Principal\"",
+      "InvalidData": {
+        "$ref": "286"
+      }
+    },
+    {
+      "$id": "564",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "289"
+      },
+      "InvalidData": {
+        "$ref": "285"
+      },
+      "Key": "Property",
+      "Value": "Claim"
+    },
+    {
+      "$id": "565",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "283"
+      },
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "566",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "567",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "568",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "569",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "570",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "571",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "283"
+      },
+      "Property": {
+        "$ref": "290"
+      }
+    },
+    {
+      "$id": "572",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "290"
+      }
+    },
+    {
+      "$id": "573",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "291"
+      },
+      "InvalidData": {
+        "$ref": "286"
+      },
+      "Key": "Property",
+      "Value": "Principal"
+    },
+    {
+      "$id": "574",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "283"
+      },
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "575",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "576",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "577",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "578",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "579",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "580",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "297"
+      }
+    },
+    {
+      "$id": "581",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "297"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var principalIds = insertedNew.Concat(updatedNew).Select(item => item.PrincipalID)\r\n                        .Concat(updatedOld.Select(item => item.PrincipalID))\r\n                        .Concat(deletedOld.Select(item => item.PrincipalID))\r\n                        .Where(pid => pid != null).Select(pid => pid.Value)\r\n                        .Distinct().ToList();\r\n                    var principalInfos = _domRepository.Common.Principal.Query(principalIds)\r\n                        .Select(p => new Rhetos.Dom.DefaultConcepts.PrincipalInfo { ID = p.ID, Name = p.Name });\r\n                    _authorizationDataCache.ClearCachePrincipals(principalInfos);"
+    },
+    {
+      "$id": "582",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "298"
+      },
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "583",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "299"
+      },
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "584",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "300"
+      }
+    },
+    {
+      "$id": "585",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "300"
+      },
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "586",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "48"
+      },
+      "PropertyNames": "Principal Claim",
+      "Dependency_SqlIndex": {
+        "$ref": "300"
+      }
+    },
+    {
+      "$id": "587",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "302"
+      }
+    },
+    {
+      "$id": "588",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "304"
+      }
+    },
+    {
+      "$id": "589",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "312"
+      }
+    },
+    {
+      "$id": "590",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "313"
+      }
+    },
+    {
+      "$id": "591",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "318"
+      }
+    },
+    {
+      "$id": "592",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "319"
+      }
+    },
+    {
+      "$id": "593",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "270"
+      },
+      "Property": {
+        "$ref": "320"
+      }
+    },
+    {
+      "$id": "594",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "320"
+      }
+    },
+    {
+      "$id": "595",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "320"
+      }
+    },
+    {
+      "$id": "596",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "318"
+      },
+      "Property": {
+        "$ref": "321"
+      }
+    },
+    {
+      "$id": "597",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "321"
+      }
+    },
+    {
+      "$id": "598",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniquePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "321"
+      }
+    },
+    {
+      "$id": "599",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "325"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var roleIds = insertedNew.Concat(updatedNew).Concat(deletedIds).Select(r => r.ID);\r\n                    _authorizationDataCache.ClearCacheRoles(roleIds);"
+    },
+    {
+      "$id": "600",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "326"
+      },
+      "Property": {
+        "$ref": "321"
+      }
+    },
+    {
+      "$id": "601",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "51"
+      },
+      "PropertyNames": "Name",
+      "Dependency_SqlIndex": {
+        "$ref": "326"
+      }
+    },
+    {
+      "$id": "602",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "327"
+      }
+    },
+    {
+      "$id": "603",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "327"
+      },
+      "Table": "Common.Role",
+      "Column": "UsersFromID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "604",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "328"
+      }
+    },
+    {
+      "$id": "605",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.RoleInheritsRole.UsersFrom\"",
+      "InvalidData": {
+        "$ref": "329"
+      }
+    },
+    {
+      "$id": "606",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "327"
+      },
+      "Property": {
+        "$ref": "331"
+      }
+    },
+    {
+      "$id": "607",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "331"
+      }
+    },
+    {
+      "$id": "608",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "331"
+      }
+    },
+    {
+      "$id": "609",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "332"
+      },
+      "InvalidData": {
+        "$ref": "329"
+      },
+      "Key": "Property",
+      "Value": "UsersFrom"
+    },
+    {
+      "$id": "610",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "327"
+      },
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "611",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "612",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "613",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "614",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "615",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "616",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "337"
+      }
+    },
+    {
+      "$id": "617",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "337"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var roleIds = insertedNew.Concat(updatedNew).Select(item => item.UsersFromID)\r\n                        .Concat(updatedOld.Select(item => item.UsersFromID))\r\n                        .Concat(deletedOld.Select(item => item.UsersFromID))\r\n                        .Where(rid => rid != null).Select(rid => rid.Value);\r\n                    _authorizationDataCache.ClearCacheRoles(roleIds);"
+    },
+    {
+      "$id": "618",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "338"
+      },
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "619",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "339"
+      }
+    },
+    {
+      "$id": "620",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "339"
+      },
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "621",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "52"
+      },
+      "PropertyNames": "UsersFrom PermissionsFrom",
+      "Dependency_SqlIndex": {
+        "$ref": "339"
+      }
+    },
+    {
+      "$id": "622",
+      "$type": "Rhetos.Dsl.DefaultConcepts.AllPropertiesLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "340"
+      }
+    },
+    {
+      "$id": "623",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "340"
+      },
+      "Table": "Common.Claim",
+      "Column": "ClaimID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "624",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoggingRelatedItemInfo, Rhetos.Dsl.DefaultConcepts",
+      "Logging": {
+        "$ref": "340"
+      },
+      "Table": "Common.Role",
+      "Column": "RoleID",
+      "Relation": "Detail"
+    },
+    {
+      "$id": "625",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RegisteredInterfaceImplementationHelperInfo, Rhetos.Dsl.DefaultConcepts",
+      "ImplementsInterface": {
+        "$ref": "341"
+      }
+    },
+    {
+      "$id": "626",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.RolePermission.Claim\"",
+      "InvalidData": {
+        "$ref": "342"
+      }
+    },
+    {
+      "$id": "627",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMessageParametersConstantInfo, Rhetos.Dsl.DefaultConcepts",
+      "MessageParameters": "@\"Reference Common.RolePermission.Role\"",
+      "InvalidData": {
+        "$ref": "343"
+      }
+    },
+    {
+      "$id": "628",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "346"
+      },
+      "InvalidData": {
+        "$ref": "342"
+      },
+      "Key": "Property",
+      "Value": "Claim"
+    },
+    {
+      "$id": "629",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "340"
+      },
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "630",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "631",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "632",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "633",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "634",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "635",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "340"
+      },
+      "Property": {
+        "$ref": "347"
+      }
+    },
+    {
+      "$id": "636",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "347"
+      }
+    },
+    {
+      "$id": "637",
+      "$type": "Rhetos.Dsl.DefaultConcepts.InvalidDataMarkProperty2Info, Rhetos.Dsl.DefaultConcepts",
+      "MarkProperty": {
+        "$ref": "348"
+      },
+      "InvalidData": {
+        "$ref": "343"
+      },
+      "Key": "Property",
+      "Value": "Role"
+    },
+    {
+      "$id": "638",
+      "$type": "Rhetos.Dsl.DefaultConcepts.PropertyLoggingInfo, Rhetos.Dsl.DefaultConcepts",
+      "EntityLogging": {
+        "$ref": "340"
+      },
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "639",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "640",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferenceDetailInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "641",
+      "$type": "Rhetos.Dsl.DefaultConcepts.ReferencePropertyDbConstraintInfo, Rhetos.Dsl.DefaultConcepts",
+      "Reference": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "642",
+      "$type": "Rhetos.Dsl.DefaultConcepts.RequiredPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "643",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SystemRequiredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "644",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "354"
+      }
+    },
+    {
+      "$id": "645",
+      "$type": "Rhetos.Dsl.DefaultConcepts.OnSaveUpdateInfo, Rhetos.Dsl.DefaultConcepts",
+      "SaveMethod": {
+        "$ref": "354"
+      },
+      "RuleName": "ClearAuthenticationCache",
+      "CsCodeSnippet": "var roleIds = insertedNew.Concat(updatedNew).Select(item => item.RoleID)\r\n                        .Concat(updatedOld.Select(item => item.RoleID))\r\n                        .Concat(deletedOld.Select(item => item.RoleID))\r\n                        .Where(rid => rid != null).Select(rid => rid.Value);\r\n                    _authorizationDataCache.ClearCacheRoles(roleIds);"
+    },
+    {
+      "$id": "646",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "355"
+      },
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "647",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "356"
+      },
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "648",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "357"
+      }
+    },
+    {
+      "$id": "649",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "SqlIndex": {
+        "$ref": "357"
+      },
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "650",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertiesInfo, Rhetos.Dsl.DefaultConcepts",
+      "DataStructure": {
+        "$ref": "53"
+      },
+      "PropertyNames": "Role Claim",
+      "Dependency_SqlIndex": {
+        "$ref": "357"
+      }
+    },
+    {
+      "$id": "651",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseFromPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PropertyInfo": {
+        "$ref": "366"
+      },
+      "Path": "Author.Name"
+    },
+    {
+      "$id": "652",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseFromPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PropertyInfo": {
+        "$ref": "367"
+      },
+      "Path": "Extension_BookInfo.NumberOfComments"
+    },
+    {
+      "$id": "653",
+      "$type": "Rhetos.Dsl.DefaultConcepts.BrowseFromPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PropertyInfo": {
+        "$ref": "368"
+      },
+      "Path": "Title"
+    },
+    {
+      "$id": "654",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "UniqueReference": {
+        "$ref": "369"
+      }
+    },
+    {
+      "$id": "655",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "389"
+      },
+      "Path": "Title"
+    },
+    {
+      "$id": "656",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "391"
+      },
+      "Property": {
+        "$ref": "101"
+      }
+    },
+    {
+      "$id": "657",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "400"
+      },
+      "SqlIndex": {
+        "$ref": "129"
+      },
+      "Property": {
+        "$ref": "168"
+      }
+    },
+    {
+      "$id": "658",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "401"
+      },
+      "Property": {
+        "$ref": "125"
+      }
+    },
+    {
+      "$id": "659",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "401"
+      },
+      "Property": {
+        "$ref": "168"
+      }
+    },
+    {
+      "$id": "660",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "428"
+      },
+      "Property": {
+        "$ref": "169"
+      }
+    },
+    {
+      "$id": "661",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "438"
+      },
+      "SqlIndex": {
+        "$ref": "185"
+      },
+      "Property": {
+        "$ref": "183"
+      }
+    },
+    {
+      "$id": "662",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "439"
+      }
+    },
+    {
+      "$id": "663",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "439"
+      },
+      "Property": {
+        "$ref": "178"
+      }
+    },
+    {
+      "$id": "664",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "439"
+      },
+      "Property": {
+        "$ref": "179"
+      }
+    },
+    {
+      "$id": "665",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "439"
+      },
+      "Property": {
+        "$ref": "182"
+      }
+    },
+    {
+      "$id": "666",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "439"
+      },
+      "Property": {
+        "$ref": "183"
+      }
+    },
+    {
+      "$id": "667",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueReferenceCascadeDeleteInfo, Rhetos.Dsl.DefaultConcepts",
+      "UniqueReference": {
+        "$ref": "445"
+      }
+    },
+    {
+      "$id": "668",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "457"
+      },
+      "SqlIndex": {
+        "$ref": "199"
+      },
+      "Property": {
+        "$ref": "194"
+      }
+    },
+    {
+      "$id": "669",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "458"
+      },
+      "Property": {
+        "$ref": "193"
+      }
+    },
+    {
+      "$id": "670",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "458"
+      },
+      "Property": {
+        "$ref": "194"
+      }
+    },
+    {
+      "$id": "671",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "466"
+      },
+      "SqlIndex": {
+        "$ref": "207"
+      },
+      "Property": {
+        "$ref": "203"
+      }
+    },
+    {
+      "$id": "672",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "467"
+      },
+      "Property": {
+        "$ref": "202"
+      }
+    },
+    {
+      "$id": "673",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "467"
+      },
+      "Property": {
+        "$ref": "203"
+      }
+    },
+    {
+      "$id": "674",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "470"
+      },
+      "SqlIndex": {
+        "$ref": "213"
+      },
+      "Property": {
+        "$ref": "210"
+      }
+    },
+    {
+      "$id": "675",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "506"
+      },
+      "SqlIndex": {
+        "$ref": "232"
+      },
+      "Property": {
+        "$ref": "222"
+      }
+    },
+    {
+      "$id": "676",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "537"
+      },
+      "Path": "Name"
+    },
+    {
+      "$id": "677",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "540"
+      },
+      "Property": {
+        "$ref": "264"
+      }
+    },
+    {
+      "$id": "678",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "552"
+      },
+      "Path": "PrincipalID"
+    },
+    {
+      "$id": "679",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "556"
+      },
+      "SqlIndex": {
+        "$ref": "282"
+      },
+      "Property": {
+        "$ref": "320"
+      }
+    },
+    {
+      "$id": "680",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "557"
+      }
+    },
+    {
+      "$id": "681",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "557"
+      },
+      "Property": {
+        "$ref": "274"
+      }
+    },
+    {
+      "$id": "682",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "557"
+      },
+      "Property": {
+        "$ref": "320"
+      }
+    },
+    {
+      "$id": "683",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "580"
+      },
+      "Path": "PrincipalID"
+    },
+    {
+      "$id": "684",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "585"
+      },
+      "SqlIndex": {
+        "$ref": "300"
+      },
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "685",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "586"
+      }
+    },
+    {
+      "$id": "686",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "586"
+      },
+      "Property": {
+        "$ref": "289"
+      }
+    },
+    {
+      "$id": "687",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "586"
+      },
+      "Property": {
+        "$ref": "291"
+      }
+    },
+    {
+      "$id": "688",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "601"
+      },
+      "Property": {
+        "$ref": "321"
+      }
+    },
+    {
+      "$id": "689",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "616"
+      },
+      "Path": "UsersFromID"
+    },
+    {
+      "$id": "690",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "620"
+      },
+      "SqlIndex": {
+        "$ref": "339"
+      },
+      "Property": {
+        "$ref": "331"
+      }
+    },
+    {
+      "$id": "691",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "621"
+      }
+    },
+    {
+      "$id": "692",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "621"
+      },
+      "Property": {
+        "$ref": "331"
+      }
+    },
+    {
+      "$id": "693",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "621"
+      },
+      "Property": {
+        "$ref": "332"
+      }
+    },
+    {
+      "$id": "694",
+      "$type": "Rhetos.Dsl.DefaultConcepts.LoadOldItemsTakeInfo, Rhetos.Dsl.DefaultConcepts",
+      "LoadOldItems": {
+        "$ref": "644"
+      },
+      "Path": "RoleID"
+    },
+    {
+      "$id": "695",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "649"
+      },
+      "SqlIndex": {
+        "$ref": "357"
+      },
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "696",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueClusteredInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "650"
+      }
+    },
+    {
+      "$id": "697",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "650"
+      },
+      "Property": {
+        "$ref": "346"
+      }
+    },
+    {
+      "$id": "698",
+      "$type": "Rhetos.Dsl.DefaultConcepts.UniqueMultiplePropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "Unique": {
+        "$ref": "650"
+      },
+      "Property": {
+        "$ref": "348"
+      }
+    },
+    {
+      "$id": "699",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "661"
+      },
+      "SqlIndex": {
+        "$ref": "185"
+      },
+      "Property": {
+        "$ref": "179"
+      }
+    },
+    {
+      "$id": "700",
+      "$type": "Rhetos.Dsl.DefaultConcepts.SqlIndexMultipleFollowingPropertyInfo, Rhetos.Dsl.DefaultConcepts",
+      "PreviousIndexProperty": {
+        "$ref": "699"
+      },
+      "SqlIndex": {
+        "$ref": "185"
+      },
+      "Property": {
+        "$ref": "182"
+      }
+    }
+  ]
+}

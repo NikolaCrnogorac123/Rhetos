@@ -1,0 +1,8 @@
+Module Bookstore 
+{
+	Entity Employee
+    {
+        ShortString UserName;
+    }
+
+}

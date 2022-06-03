@@ -1,0 +1,7 @@
+﻿Module Bookstore
+{
+    Entity Person
+    {
+        ShortString Name;
+    }
+}
