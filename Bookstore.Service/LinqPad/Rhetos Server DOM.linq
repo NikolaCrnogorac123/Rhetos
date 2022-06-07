@@ -6,29 +6,29 @@
     <Database>BookStore</Database>
     <ShowServer>true</ShowServer>
   </Connection>
-  <Reference Relative="..\bin\Autofac.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Autofac.dll</Reference>
-  <Reference Relative="..\bin\EntityFramework.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\EntityFramework.dll</Reference>
-  <Reference Relative="..\bin\EntityFramework.SqlServer.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\EntityFramework.SqlServer.dll</Reference>
-  <Reference Relative="..\bin\Bookstore.Service.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Bookstore.Service.dll</Reference>
+  <Reference Relative="..\bin\Autofac.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Autofac.dll</Reference>
+  <Reference Relative="..\bin\EntityFramework.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\EntityFramework.dll</Reference>
+  <Reference Relative="..\bin\EntityFramework.SqlServer.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\EntityFramework.SqlServer.dll</Reference>
+  <Reference Relative="..\bin\Bookstore.Service.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Bookstore.Service.dll</Reference>
   <Reference>..\bin\Generated\ServerDom.Orm.dll</Reference>
   <Reference>..\bin\Generated\ServerDom.Repositories.dll</Reference>
-  <Reference Relative="..\bin\NLog.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\NLog.dll</Reference>
-  <Reference Relative="..\bin\Oracle.ManagedDataAccess.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Oracle.ManagedDataAccess.dll</Reference>
+  <Reference Relative="..\bin\NLog.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\NLog.dll</Reference>
+  <Reference Relative="..\bin\Oracle.ManagedDataAccess.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Oracle.ManagedDataAccess.dll</Reference>
   <Reference>..\bin\Rhetos.AspNetFormsAuth.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Dom.DefaultConcepts.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.DefaultConcepts.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Dom.DefaultConcepts.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.DefaultConcepts.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Dsl.DefaultConcepts.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dsl.DefaultConcepts.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Processing.DefaultCommands.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Processing.DefaultCommands.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Configuration.Autofac.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Configuration.Autofac.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Dom.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Dsl.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dsl.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Logging.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Logging.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Persistence.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Persistence.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Processing.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Processing.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Security.Interfaces.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Security.Interfaces.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.TestCommon.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.TestCommon.dll</Reference>
-  <Reference Relative="..\bin\Rhetos.Utilities.dll">&lt;MyDocuments&gt;\BookStore\Bookstore.Service\Bookstore.Service\bin\Rhetos.Utilities.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Dom.DefaultConcepts.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.DefaultConcepts.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Dom.DefaultConcepts.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.DefaultConcepts.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Dsl.DefaultConcepts.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dsl.DefaultConcepts.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Processing.DefaultCommands.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Processing.DefaultCommands.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Configuration.Autofac.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Configuration.Autofac.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Dom.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dom.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Dsl.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Dsl.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Logging.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Logging.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Persistence.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Persistence.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Processing.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Processing.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Security.Interfaces.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Security.Interfaces.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.TestCommon.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.TestCommon.dll</Reference>
+  <Reference Relative="..\bin\Rhetos.Utilities.dll">&lt;MyDocuments&gt;\TargetFolder\Bookstore.Service\Bookstore.Service\bin\Rhetos.Utilities.dll</Reference>
   <Reference>&lt;RuntimeDirectory&gt;\System.DirectoryServices.AccountManagement.dll</Reference>
   <Reference>&lt;RuntimeDirectory&gt;\System.DirectoryServices.dll</Reference>
   <Reference>&lt;RuntimeDirectory&gt;\System.Runtime.Serialization.dll</Reference>
@@ -67,8 +67,9 @@ void Main()
 	using (var scope = ProcessContainer.CreateScope(applicationFolder))
     {
         var context = scope.Resolve<Common.ExecutionContext>();
-        var repository = context.Repository;
-		
+		var repository = context.Repository;
+		var Books = repository.Bookstore.Book.Load().Select(books => new { books.Title, books.Author }).Dump();
+
 		/* USING COMPOSABLEFILTER TO GET OUTPUT
 		var filterParameters = new Bookstore.AverageBooks{
 			MinimumPages=0,
@@ -78,9 +79,11 @@ void Main()
 		var query = repository.Bookstore.Book.Query(filterParameters);
 		query.ToSimple().ToList().Dump();
 		*/
-		
+
 		/*		Get Book title and Author with Load()
 		
+				var Books = repository.Bookstore.Book.Load();
+				Books.Select(books => new{books.Title,books.AuthorID}).Dump();
 		*/
 		
 		//							Query with book title and author name
@@ -118,5 +121,11 @@ void Main()
 		scope.CommitAndClose();
 		*/
 
+
+		//Rješenje pitanja iz 1. dana
+		//Razlog dobivanja drugačijih rezultata u sve tri linije je poredak komandi nakon query.
+		//Nakon ToList() ništa drugo ne dolazi u obzir jer se query morao pozvati kako bi napunio listu
+		//Te uzima sve parametre do tada odabrane kako bi kreirao taj upit koji puni listu
+		//3. Zadnja komentirana linija unutar LinqPada baca compile error zato što možemo koristit samo jednostavne izraze nakon =>
     }
 }

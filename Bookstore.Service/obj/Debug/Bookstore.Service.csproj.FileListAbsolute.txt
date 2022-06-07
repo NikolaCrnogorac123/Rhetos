@@ -254,7 +254,6 @@ C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\b
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\bin\rhetos.exe
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\bin\rhetos.exe.config
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\bin\rhetos.pdb
-C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\obj\Debug\Bookstore.Service.csproj.AssemblyReference.cache
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\obj\Debug\Bookstore.Service.csproj.CoreCompileInputs.cache
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\obj\Debug\Bookstore.Service.csproj.CopyComplete
 C:\Users\ncrnogorac\Documents\TargetFolder\Bookstore.Service\Bookstore.Service\obj\Debug\Bookstore.Service.dll

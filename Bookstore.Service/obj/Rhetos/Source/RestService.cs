@@ -108,6 +108,8 @@ namespace RestService
             System.Web.Routing.RouteTable.Routes.Add(new System.ServiceModel.Activation.ServiceRoute(
                 "Rest/Bookstore/BookInfo", new RestServiceHostFactory(), typeof(DataRestService<Bookstore.BookInfo>)));
             System.Web.Routing.RouteTable.Routes.Add(new System.ServiceModel.Activation.ServiceRoute(
+                "Rest/Bookstore/BooksWithTopics", new RestServiceHostFactory(), typeof(DataRestService<Bookstore.BooksWithTopics>)));
+            System.Web.Routing.RouteTable.Routes.Add(new System.ServiceModel.Activation.ServiceRoute(
                 "Rest/Bookstore/BookTopic", new RestServiceHostFactory(), typeof(DataRestService<Bookstore.BookTopic>)));
             System.Web.Routing.RouteTable.Routes.Add(new System.ServiceModel.Activation.ServiceRoute(
                 "Rest/Bookstore/ChildrensBook", new RestServiceHostFactory(), typeof(DataRestService<Bookstore.ChildrensBook>)));
@@ -208,6 +210,8 @@ namespace RestService
                 /*DataStructureInfo FilterTypes Bookstore.Book*/ };
         public static Tuple<string, Type>[] Get_Bookstore_BookInfo_FilterTypes() => new Tuple<string, Type>[] {
                 /*DataStructureInfo FilterTypes Bookstore.BookInfo*/ };
+        public static Tuple<string, Type>[] Get_Bookstore_BooksWithTopics_FilterTypes() => new Tuple<string, Type>[] {
+                /*DataStructureInfo FilterTypes Bookstore.BooksWithTopics*/ };
         public static Tuple<string, Type>[] Get_Bookstore_BookTopic_FilterTypes() => new Tuple<string, Type>[] {
                 Tuple.Create("Bookstore.SystemRequiredBook", typeof(Bookstore.SystemRequiredBook)),
                 Tuple.Create("SystemRequiredBook", typeof(Bookstore.SystemRequiredBook)),

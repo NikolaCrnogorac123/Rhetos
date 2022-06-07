@@ -39,6 +39,15 @@
             });
         }
         /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
+        public static IQueryable<Bookstore.BooksWithTopics> ToSimple(this IQueryable<Common.Queryable.Bookstore_BooksWithTopics> query)
+        {
+            return query.Select(item => new Bookstore.BooksWithTopics
+            {
+                ID = item.ID,
+                NumberOfTopics = item.NumberOfTopics/*DataStructureInfo AssignSimpleProperty Bookstore.BooksWithTopics*/
+            });
+        }
+        /// <summary>Converts the objects with navigation properties to simple objects with primitive properties.</summary>
         public static IQueryable<Bookstore.BookTopic> ToSimple(this IQueryable<Common.Queryable.Bookstore_BookTopic> query)
         {
             return query.Select(item => new Bookstore.BookTopic

@@ -5344,51 +5344,61 @@
             },
             {
               "$id": "1037",
+              "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\FlatBook.rhe",
+              "InPackagePath": "DslScripts\\FlatBook.rhe"
+            },
+            {
+              "$id": "1038",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\ForeignBook.rhe",
               "InPackagePath": "DslScripts\\ForeignBook.rhe"
             },
             {
-              "$id": "1038",
+              "$id": "1039",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\Genre.rhe",
               "InPackagePath": "DslScripts\\Genre.rhe"
             },
             {
-              "$id": "1039",
+              "$id": "1040",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\Insert5Books.rhe",
               "InPackagePath": "DslScripts\\Insert5Books.rhe"
             },
             {
-              "$id": "1040",
+              "$id": "1041",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\InsertManyBooks.rhe",
               "InPackagePath": "DslScripts\\InsertManyBooks.rhe"
             },
             {
-              "$id": "1041",
+              "$id": "1042",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\MyFirstConcept\\PhoneNumberInfo.cs",
               "InPackagePath": "DslScripts\\MyFirstConcept\\PhoneNumberInfo.cs"
             },
             {
-              "$id": "1042",
+              "$id": "1043",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\MyFirstConcept\\PhoneNumberMacro.cs",
               "InPackagePath": "DslScripts\\MyFirstConcept\\PhoneNumberMacro.cs"
             },
             {
-              "$id": "1043",
+              "$id": "1044",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\Person.rhe",
               "InPackagePath": "DslScripts\\Person.rhe"
             },
             {
-              "$id": "1044",
+              "$id": "1045",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\SQL\\ActiveEmployees.sql",
               "InPackagePath": "DslScripts\\SQL\\ActiveEmployees.sql"
             },
             {
-              "$id": "1045",
+              "$id": "1046",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\SQL\\BookInfo.sql",
               "InPackagePath": "DslScripts\\SQL\\BookInfo.sql"
             },
             {
-              "$id": "1046",
+              "$id": "1047",
+              "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\SQL\\BookTopics.sql",
+              "InPackagePath": "DslScripts\\SQL\\BookTopics.sql"
+            },
+            {
+              "$id": "1048",
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\Topic.rhe",
               "InPackagePath": "DslScripts\\Topic.rhe"
             }

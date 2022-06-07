@@ -1281,7 +1281,7 @@
       ]
     },
     "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\bin\\Bookstore.Service.dll": {
-      "ModifiedTime": "2022-06-03T09:24:04.8560003Z",
+      "ModifiedTime": "2022-06-07T07:04:02.6534241Z",
       "TypesWithExports": [
         "RestService.RestServiceModuleConfiguration, Bookstore.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
         "Common.AutofacModuleConfiguration, Bookstore.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",

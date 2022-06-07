@@ -24,6 +24,14 @@
       </MappingFragment>
     </EntityTypeMapping>
   </EntitySetMapping>
+  <EntitySetMapping Name="Bookstore_BooksWithTopics">
+    <EntityTypeMapping TypeName="Rhetos.Bookstore_BooksWithTopics">
+      <MappingFragment StoreEntitySet="Bookstore_BooksWithTopics">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+        <ScalarProperty Name="NumberOfTopics" ColumnName="NumberOfTopics" />
+      </MappingFragment>
+    </EntityTypeMapping>
+  </EntitySetMapping>
   <EntitySetMapping Name="Bookstore_BookTopic">
     <EntityTypeMapping TypeName="Rhetos.Bookstore_BookTopic">
       <MappingFragment StoreEntitySet="Bookstore_BookTopic">

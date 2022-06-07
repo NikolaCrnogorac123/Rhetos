@@ -4176,6 +4176,10 @@
               "InPackagePath": "DslScripts\\Employee.rhe"
             },
             {
+              "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\FlatBook.rhe",
+              "InPackagePath": "DslScripts\\FlatBook.rhe"
+            },
+            {
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\ForeignBook.rhe",
               "InPackagePath": "DslScripts\\ForeignBook.rhe"
             },
@@ -4210,6 +4214,10 @@
             {
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\SQL\\BookInfo.sql",
               "InPackagePath": "DslScripts\\SQL\\BookInfo.sql"
+            },
+            {
+              "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\SQL\\BookTopics.sql",
+              "InPackagePath": "DslScripts\\SQL\\BookTopics.sql"
             },
             {
               "PhysicalPath": "C:\\Users\\ncrnogorac\\Documents\\TargetFolder\\Bookstore.Service\\Bookstore.Service\\DslScripts\\Topic.rhe",

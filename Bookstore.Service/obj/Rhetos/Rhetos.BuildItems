@@ -4,6 +4,7 @@ DslScripts\Books.rhe
 DslScripts\BookTopic.rhe
 DslScripts\ChildrensBook.rhe
 DslScripts\Employee.rhe
+DslScripts\FlatBook.rhe
 DslScripts\ForeignBook.rhe
 DslScripts\Genre.rhe
 DslScripts\Insert5Books.rhe
@@ -13,4 +14,5 @@ DslScripts\MyFirstConcept\PhoneNumberMacro.cs
 DslScripts\Person.rhe
 DslScripts\SQL\ActiveEmployees.sql
 DslScripts\SQL\BookInfo.sql
+DslScripts\SQL\BookTopics.sql
 DslScripts\Topic.rhe

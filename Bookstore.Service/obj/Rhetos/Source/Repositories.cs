@@ -172,6 +172,7 @@
             builder.RegisterInstance(Infrastructure.CurrentKeepSynchronizedMetadata).ExternallyOwned();
             builder.RegisterType<Bookstore._Helper.Book_Repository>().Keyed<IRepository>("Bookstore.Book").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore._Helper.BookInfo_Repository>().Keyed<IRepository>("Bookstore.BookInfo").InstancePerLifetimeScope();
+            builder.RegisterType<Bookstore._Helper.BooksWithTopics_Repository>().Keyed<IRepository>("Bookstore.BooksWithTopics").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore._Helper.BookTopic_Repository>().Keyed<IRepository>("Bookstore.BookTopic").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore._Helper.ChildrensBook_Repository>().Keyed<IRepository>("Bookstore.ChildrensBook").InstancePerLifetimeScope();
             builder.RegisterType<Bookstore._Helper.Comment_Repository>().Keyed<IRepository>("Bookstore.Comment").InstancePerLifetimeScope();

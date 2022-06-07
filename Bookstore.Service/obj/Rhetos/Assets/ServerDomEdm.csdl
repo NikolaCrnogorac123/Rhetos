@@ -93,6 +93,7 @@
     <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="AuthorID" Type="Guid" />
     <NavigationProperty Name="Extension_BookInfo" Relationship="Self.Bookstore_BookInfo_Base" FromRole="Bookstore_BookInfo_Base_Target" ToRole="Bookstore_BookInfo_Base_Source" />
+    <NavigationProperty Name="Extension_BooksWithTopics" Relationship="Self.Bookstore_BooksWithTopics_Base" FromRole="Bookstore_BooksWithTopics_Base_Target" ToRole="Bookstore_BooksWithTopics_Base_Source" />
     <NavigationProperty Name="Extension_ChildrensBook" Relationship="Self.Bookstore_ChildrensBook_Base" FromRole="Bookstore_ChildrensBook_Base_Target" ToRole="Bookstore_ChildrensBook_Base_Source" />
     <NavigationProperty Name="Extension_ForeignBook" Relationship="Self.Bookstore_ForeignBook_Base" FromRole="Bookstore_ForeignBook_Base_Target" ToRole="Bookstore_ForeignBook_Base_Source" />
     <NavigationProperty Name="Author" Relationship="Self.Bookstore_Book_Author" FromRole="Bookstore_Book_Author_Source" ToRole="Bookstore_Book_Author_Target" />
@@ -104,6 +105,14 @@
     <Property Name="ID" Type="Guid" Nullable="false" />
     <Property Name="NumberOfComments" Type="Int32" />
     <NavigationProperty Name="Base" Relationship="Self.Bookstore_BookInfo_Base" FromRole="Bookstore_BookInfo_Base_Source" ToRole="Bookstore_BookInfo_Base_Target" />
+  </EntityType>
+  <EntityType Name="Bookstore_BooksWithTopics" customannotation:ClrType="Common.Queryable.Bookstore_BooksWithTopics, Bookstore.Service">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="NumberOfTopics" Type="Int32" />
+    <NavigationProperty Name="Base" Relationship="Self.Bookstore_BooksWithTopics_Base" FromRole="Bookstore_BooksWithTopics_Base_Source" ToRole="Bookstore_BooksWithTopics_Base_Target" />
   </EntityType>
   <EntityType Name="Bookstore_BookTopic" customannotation:ClrType="Common.Queryable.Bookstore_BookTopic, Bookstore.Service">
     <Key>
@@ -361,6 +370,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Bookstore_BooksWithTopics_Base">
+    <End Role="Bookstore_BooksWithTopics_Base_Source" Type="Self.Bookstore_BooksWithTopics" Multiplicity="0..1" />
+    <End Role="Bookstore_BooksWithTopics_Base_Target" Type="Self.Bookstore_Book" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_BooksWithTopics_Base_Target">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_BooksWithTopics_Base_Source">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Bookstore_BookTopic_Book">
     <End Role="Bookstore_BookTopic_Book_Source" Type="Self.Bookstore_BookTopic" Multiplicity="*" />
     <End Role="Bookstore_BookTopic_Book_Target" Type="Self.Bookstore_Book" Multiplicity="0..1" />
@@ -581,6 +602,7 @@
     
     <EntitySet Name="Bookstore_Book" EntityType="Self.Bookstore_Book" />
     <EntitySet Name="Bookstore_BookInfo" EntityType="Self.Bookstore_BookInfo" />
+    <EntitySet Name="Bookstore_BooksWithTopics" EntityType="Self.Bookstore_BooksWithTopics" />
     <EntitySet Name="Bookstore_BookTopic" EntityType="Self.Bookstore_BookTopic" />
     <EntitySet Name="Bookstore_ChildrensBook" EntityType="Self.Bookstore_ChildrensBook" />
     <EntitySet Name="Bookstore_Comment" EntityType="Self.Bookstore_Comment" />
@@ -608,6 +630,10 @@
 	<AssociationSet Name="Bookstore_BookInfo_Base" Association="Self.Bookstore_BookInfo_Base">
 		<End Role="Bookstore_BookInfo_Base_Source" EntitySet="Bookstore_BookInfo" />
 		<End Role="Bookstore_BookInfo_Base_Target" EntitySet="Bookstore_Book" />
+	</AssociationSet>
+	<AssociationSet Name="Bookstore_BooksWithTopics_Base" Association="Self.Bookstore_BooksWithTopics_Base">
+		<End Role="Bookstore_BooksWithTopics_Base_Source" EntitySet="Bookstore_BooksWithTopics" />
+		<End Role="Bookstore_BooksWithTopics_Base_Target" EntitySet="Bookstore_Book" />
 	</AssociationSet>
 	<AssociationSet Name="Bookstore_BookTopic_Book" Association="Self.Bookstore_BookTopic_Book">
 		<End Role="Bookstore_BookTopic_Book_Source" EntitySet="Bookstore_BookTopic" />

@@ -28,6 +28,9 @@
         private BookInfo_Repository _BookInfo_Repository;
         public BookInfo_Repository BookInfo { get { return _BookInfo_Repository ?? (_BookInfo_Repository = (BookInfo_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.BookInfo")); } }
 
+        private BooksWithTopics_Repository _BooksWithTopics_Repository;
+        public BooksWithTopics_Repository BooksWithTopics { get { return _BooksWithTopics_Repository ?? (_BooksWithTopics_Repository = (BooksWithTopics_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.BooksWithTopics")); } }
+
         private BookTopic_Repository _BookTopic_Repository;
         public BookTopic_Repository BookTopic { get { return _BookTopic_Repository ?? (_BookTopic_Repository = (BookTopic_Repository)Rhetos.Extensibility.NamedPluginsExtensions.GetPlugin(_repositories, @"Bookstore.BookTopic")); } }
 
@@ -563,6 +566,22 @@
         }
 
         /*DataStructureInfo RepositoryMembers Bookstore.BookInfo*/
+    }
+
+    /*DataStructureInfo RepositoryAttributes Bookstore.BooksWithTopics*/
+    public class BooksWithTopics_Repository : /*DataStructureInfo OverrideBaseType Bookstore.BooksWithTopics*/ Common.OrmRepositoryBase<Common.Queryable.Bookstore_BooksWithTopics, Bookstore.BooksWithTopics> // Common.QueryableRepositoryBase<Common.Queryable.Bookstore_BooksWithTopics, Bookstore.BooksWithTopics> // Common.ReadableRepositoryBase<Bookstore.BooksWithTopics> // global::Common.RepositoryBase
+        /*DataStructureInfo RepositoryInterface Bookstore.BooksWithTopics*/
+    {
+        /*DataStructureInfo RepositoryPrivateMembers Bookstore.BooksWithTopics*/
+
+        public BooksWithTopics_Repository(Common.DomRepository domRepository, Common.ExecutionContext executionContext/*DataStructureInfo RepositoryConstructorArguments Bookstore.BooksWithTopics*/)
+        {
+            _domRepository = domRepository;
+            _executionContext = executionContext;
+            /*DataStructureInfo RepositoryConstructorCode Bookstore.BooksWithTopics*/
+        }
+
+        /*DataStructureInfo RepositoryMembers Bookstore.BooksWithTopics*/
     }
 
     /*DataStructureInfo RepositoryAttributes Bookstore.BookTopic*/

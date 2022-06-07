@@ -51,6 +51,13 @@
     <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
     <Property Name="NumberOfComments" Type="int" Nullable="true" />
   </EntityType>
+  <EntityType Name="Bookstore_BooksWithTopics">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false"  customannotation:Index="{ Name: IX_ID, Order: 0 }"/>
+    <Property Name="NumberOfTopics" Type="int" Nullable="true" />
+  </EntityType>
   <EntityType Name="Bookstore_BookTopic">
     <Key>
       <PropertyRef Name="ID" />
@@ -290,6 +297,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="Bookstore_BooksWithTopics_Base">
+    <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="1" />
+    <End Role="Bookstore_BooksWithTopics" Type="Self.Bookstore_BooksWithTopics" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookstore_Book">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bookstore_BooksWithTopics">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Bookstore_BookTopic_Book">
     <End Role="Bookstore_Book" Type="Self.Bookstore_Book" Multiplicity="0..1" />
     <End Role="Bookstore_BookTopic" Type="Self.Bookstore_BookTopic" Multiplicity="*" />
@@ -510,6 +529,7 @@
     
     <EntitySet Name="Bookstore_Book" EntityType="Self.Bookstore_Book" Schema="Bookstore" Table="Book" />
     <EntitySet Name="Bookstore_BookInfo" EntityType="Self.Bookstore_BookInfo" Schema="Bookstore" Table="BookInfo" />
+    <EntitySet Name="Bookstore_BooksWithTopics" EntityType="Self.Bookstore_BooksWithTopics" Schema="Bookstore" Table="BooksWithTopics" />
     <EntitySet Name="Bookstore_BookTopic" EntityType="Self.Bookstore_BookTopic" Schema="Bookstore" Table="BookTopic" />
     <EntitySet Name="Bookstore_ChildrensBook" EntityType="Self.Bookstore_ChildrensBook" Schema="Bookstore" Table="ChildrensBook" />
     <EntitySet Name="Bookstore_Comment" EntityType="Self.Bookstore_Comment" Schema="Bookstore" Table="Comment" />
@@ -537,6 +557,10 @@
   <AssociationSet Name="Bookstore_BookInfo_Base" Association="Self.Bookstore_BookInfo_Base">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
     <End Role="Bookstore_BookInfo" EntitySet="Bookstore_BookInfo" />
+  </AssociationSet>
+  <AssociationSet Name="Bookstore_BooksWithTopics_Base" Association="Self.Bookstore_BooksWithTopics_Base">
+    <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />
+    <End Role="Bookstore_BooksWithTopics" EntitySet="Bookstore_BooksWithTopics" />
   </AssociationSet>
   <AssociationSet Name="Bookstore_BookTopic_Book" Association="Self.Bookstore_BookTopic_Book">
     <End Role="Bookstore_Book" EntitySet="Bookstore_Book" />

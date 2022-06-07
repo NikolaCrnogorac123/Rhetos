@@ -88,6 +88,25 @@
         /*DataStructureInfo ClassBody Bookstore.BookInfo*/
     }
 
+    [DataContract]/*DataStructureInfo ClassAttributes Bookstore.BooksWithTopics*/
+    public class BooksWithTopics : EntityBase<Bookstore.BooksWithTopics>/*Next DataStructureInfo ClassInterace Bookstore.BooksWithTopics*/
+    {
+        /// <summary>Converts the simple object to a navigation object, and copies its simple properties. Navigation properties are set to null.</summary>
+        public Common.Queryable.Bookstore_BooksWithTopics ToNavigation()
+        {
+            var item = this;
+            return new Common.Queryable.Bookstore_BooksWithTopics
+            {
+                ID = item.ID,
+                NumberOfTopics = item.NumberOfTopics/*DataStructureInfo AssignSimpleProperty Bookstore.BooksWithTopics*/
+            };
+        }
+
+        [DataMember]/*PropertyInfo Attribute Bookstore.BooksWithTopics.NumberOfTopics*/
+        public int? NumberOfTopics { get; set; }
+        /*DataStructureInfo ClassBody Bookstore.BooksWithTopics*/
+    }
+
     [DataContract]/*DataStructureInfo ClassAttributes Bookstore.BookTopic*/
     public class BookTopic : EntityBase<Bookstore.BookTopic>/*Next DataStructureInfo ClassInterace Bookstore.BookTopic*/
     {
@@ -435,6 +454,24 @@ namespace Common.Queryable
             }
         }
 
+        private Common.Queryable.Bookstore_BooksWithTopics _extension_BooksWithTopics;
+
+        /*DataStructureQueryable PropertyAttribute Bookstore.Book.Extension_BooksWithTopics*/
+        public virtual Common.Queryable.Bookstore_BooksWithTopics Extension_BooksWithTopics
+        {
+            get
+            {
+                /*DataStructureQueryable Getter Bookstore.Book.Extension_BooksWithTopics*/
+                return _extension_BooksWithTopics;
+            }
+            set
+            {
+                if (((IDetachOverride)this).Detaching) return;
+                /*DataStructureQueryable Setter Bookstore.Book.Extension_BooksWithTopics*/
+                _extension_BooksWithTopics = value;
+            }
+        }
+
         private Common.Queryable.Bookstore_ChildrensBook _extension_ChildrensBook;
 
         /*DataStructureQueryable PropertyAttribute Bookstore.Book.Extension_ChildrensBook*/
@@ -554,6 +591,49 @@ namespace Common.Queryable
         /*DataStructureInfo QueryableClassMembers Bookstore.BookInfo*/
 
         public bool Equals(Bookstore_BookInfo other)
+        {
+            return other != null && other.ID == ID;
+        }
+    }
+
+    /*DataStructureInfo QueryableClassAttributes Bookstore.BooksWithTopics*/
+    public class Bookstore_BooksWithTopics : global::Bookstore.BooksWithTopics, IQueryableEntity<Bookstore.BooksWithTopics>, System.IEquatable<Bookstore_BooksWithTopics>, IDetachOverride/*DataStructureInfo QueryableClassInterace Bookstore.BooksWithTopics*/
+    {
+        bool IDetachOverride.Detaching { get; set; }
+
+        /// <summary>Converts the object with navigation properties to a simple object with primitive properties.</summary>
+        public Bookstore.BooksWithTopics ToSimple()
+        {
+            var item = this;
+            return new Bookstore.BooksWithTopics
+            {
+                ID = item.ID,
+                NumberOfTopics = item.NumberOfTopics/*DataStructureInfo AssignSimpleProperty Bookstore.BooksWithTopics*/
+            };
+        }
+
+        private Common.Queryable.Bookstore_Book _base;
+
+        /*DataStructureQueryable PropertyAttribute Bookstore.BooksWithTopics.Base*/
+        public virtual Common.Queryable.Bookstore_Book Base
+        {
+            get
+            {
+                /*DataStructureQueryable Getter Bookstore.BooksWithTopics.Base*/
+                return _base;
+            }
+            set
+            {
+                if (((IDetachOverride)this).Detaching) return;
+                /*DataStructureQueryable Setter Bookstore.BooksWithTopics.Base*/
+                _base = value;
+                ID = value != null ? value.ID : Guid.Empty;
+            }
+        }
+
+        /*DataStructureInfo QueryableClassMembers Bookstore.BooksWithTopics*/
+
+        public bool Equals(Bookstore_BooksWithTopics other)
         {
             return other != null && other.ID == ID;
         }

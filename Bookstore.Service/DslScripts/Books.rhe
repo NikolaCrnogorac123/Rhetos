@@ -88,4 +88,12 @@
         Take 'Author.Name';
         Take NumberOfTopics 'Extension_BookInfo.NumberOfComments';
     }
+
+    SqlQueryable BooksWithTopics<SQL\BookTopics.sql>
+    {
+        Extends Bookstore.Book;
+        Integer NumberOfTopics;
+
+        AutodetectSqlDependencies;
+    }
 }
