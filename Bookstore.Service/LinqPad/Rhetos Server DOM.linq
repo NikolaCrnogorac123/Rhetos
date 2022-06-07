@@ -68,7 +68,7 @@ void Main()
     {
         var context = scope.Resolve<Common.ExecutionContext>();
 		var repository = context.Repository;
-		var Books = repository.Bookstore.Book.Load().Select(books => new { books.Title, books.Author }).Dump();
+		var Books = repository.Bookstore.Book.Load().Select(books => new { books.Title, books.AuthorID }).Dump();
 
 		/* USING COMPOSABLEFILTER TO GET OUTPUT
 		var filterParameters = new Bookstore.AverageBooks{
